@@ -14,8 +14,8 @@ theme:
       toggle:
         icon: material/lightbulb
         name: Switch to light mode
-  # logo: assets/logo.png
-  # favicon: assets/logo.png
+  logo: assets/tsc-logo.jpg
+  favicon: assets/tsc-logo.jpg
   features:
     - content.code.annotate
     - content.tooltips
