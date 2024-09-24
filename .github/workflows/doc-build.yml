@@ -41,14 +41,16 @@ jobs:
       - name: Install PDFtk
         run: sudo apt-get install -y pdftk
 
-      - name: Convert Markdown to PDF and Merge
+      - name: Combine and Order Markdown Files into One PDF
         run: |
-          mkdir -p output/pdfs  # Create output directory
-          for file in docs/*.md; do
-            filename=$(basename -- "$file" .md)
-            pandoc "$file" -o "output/pdfs/$filename.pdf"
-          done
-          pdftk output/pdfs/*.pdf cat output output/pdfs/combined.pdf
+          mkdir -p output
+          pandoc analyzer-getting-started.md analyzer-launch.md analyzer-config-connect.md analyzer-run-terminate.md analyzer-retrieve-vcf.md -o output/GenomeSuiteDocs.pdf --toc
+
+      - name: Upload Combined PDF as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: GenomeSuiteDocs
+          path: output/GenomeSuiteDocs.pdf
 
       - name: Commit PDFs to repo
         run: |
