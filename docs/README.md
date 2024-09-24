@@ -1,5 +1,7 @@
-# Documentation template
+Welcome to the official documentation for GenomeSuite by The Sequencing Center.
 
-This is a template to quickly spin up MkDocs + Material static sites.
+## Contact
 
-The latest references for formatting can be found on the [Material website](https://squidfunk.github.io/mkdocs-material/).
+**Company Website:** [www.thesequencingcenter.com](thesequencingcenter.com)
+
+**Email:** info@thesequencingcenter.com
