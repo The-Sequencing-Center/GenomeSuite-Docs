@@ -61,7 +61,7 @@ jobs:
           mkdir -p output
           ls -R  # Debugging: list all files to ensure correct paths
           pandoc output/cover-page.md \
-                --toc \
+                 --toc \
                  docs/analyzer-getting-started.md \
                  docs/analyzer-launch.md \
                  docs/analyzer-config-connect.md \
