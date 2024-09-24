@@ -20,6 +20,7 @@ theme:
     - content.code.annotate
     - content.tooltips
     - content.tabs.link
+    - navigation.expand
     - navigation.indexes
     - navigation.top
     - navigation.tracking
