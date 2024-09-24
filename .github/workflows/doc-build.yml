@@ -49,7 +49,7 @@ jobs:
           echo "## Date: $(date '+%Y-%m-%d')" >> output/cover-page.md
           echo "### Repository: ${{ github.repository }}" >> output/cover-page.md
           echo "**Website:** [wwww.thesequencingcenter.com](http://www.thesequencingcenter.com)" >> output/cover-page.md
-          echo "**Support:** [info@thesequencingcenter.com](info@thesequencingcenter.com)" >> output/cover-page.md
+          echo "**Support:** [support@thesequencingcenter.com](support@thesequencingcenter.com)" >> output/cover-page.md
           echo "**Phone:** +1 877-425-2235" >> output/cover-page.md
           echo "" >> output/cover-page.md
 
