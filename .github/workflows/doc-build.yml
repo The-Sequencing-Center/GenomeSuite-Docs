@@ -49,3 +49,11 @@ jobs:
             pandoc "$file" -o "output/pdfs/$filename.pdf"
           done
           pdftk output/pdfs/*.pdf cat output output/pdfs/combined.pdf
+
+      - name: Commit PDFs to repo
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add output/pdfs/
+          git commit -m "Add generated PDFs"
+          git push origin main
