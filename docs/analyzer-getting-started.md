@@ -75,11 +75,11 @@ You will now create an AWS S3 bucket that will contain all of your Nanopore POD5
 
 1. After the bucket is created, you will be taken back to the S3 dashboard, where you will see the bucket name listed among your S3 buckets.
 
-## Upload POD5 Files to S3 Bucket
+### Uploading POD5 Files to S3 Bucket
 
 There are several methods available for uploading POD5 files to S3 buckets. These methods are beyond the scope of this document. For human whole genome sequencing, the aggregate size of these files is quite large, ca. 1TB or more, and may need special methods to upload in reasonable time. Please contact us at support@thesequencingcenter.com to review and discuss options for uploading large datasets.
 
-## Store POD5 Files in S3 Bucket
+### Storing POD5 Files in S3 Bucket
 
 If you already have an AWS account and an S3 bucket with POD5 files in it, you have two choices. You can use the existing Bucket name with GenomeSuite: Analyzer. Or you can copy or move the POD5 files from the existing bucket to another bucket within the same AWS account. 
 
