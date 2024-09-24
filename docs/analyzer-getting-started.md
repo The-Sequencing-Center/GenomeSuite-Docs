@@ -1,4 +1,10 @@
-# Configuring an AWS Account
+# Getting Started
+
+GenomeSuite Analyzer runs on the [Amazon Web Services (AWS)](https://aws.amazon.com/) platform.  
+* If you do not have an AWS account, start with the "Create AWS Account" instructions below.  
+* If you do have an AWS account, you can skip to the step "Login to AWS Account".
+
+Some steps are identified as a “**one-time step**”.  This means you should only have to perform this step once during initial setup.
 
 ## Create AWS Account
 
@@ -31,7 +37,7 @@ To create an AWS account, follow these steps:
 
 After your account is activated, you can sign in to the AWS Management Console and start using AWS services.
 
-# Login to AWS Account
+## Login to AWS Account
 
 To log in to your AWS account, follow these steps:
 
@@ -54,7 +60,7 @@ To log in to your AWS account, follow these steps:
 5. **Access the AWS Management Console:**
    - After successful authentication, you will be directed to the AWS Management Console, where you can start managing your AWS services.
 
-# Create an S3 Bucket
+## Create an S3 Bucket
 
 This is a **one-time** step.
 
@@ -83,15 +89,15 @@ You will now create an AWS S3 bucket that will contain all of your Nanopore POD5
 6. **Verify Bucket Creation:**
    - After the bucket is created, you will be taken back to the S3 dashboard, where you should see Bucket name listed among your S3 buckets.
 
-# Upload POD5 Files to S3 Bucket
+## Upload POD5 Files to S3 Bucket
 
 There are several methods available for uploading POD5 files to S3 buckets. These methods are beyond the scope of this document. For human whole genome sequencing, the aggregate size of these files is quite large, ca. 1TB or more, and may need special methods to upload in reasonable time. Please contact us at support@thesequencingcenter.com to review and discuss options for uploading large datasets.
 
-# Store POD5 Files in S3 Bucket
+## Store POD5 Files in S3 Bucket
 
 If you already have an AWS account and an S3 bucket with POD5 files in it, you have two choices. You can use the existing Bucket name with Sniffles. Or you can copy or move the POD5 files from the existing bucket to another bucket within the same AWS account. To copy or move files, follow these instructions:
 
-## Using the AWS Management Console
+### Using the AWS Management Console
 
 1. **Navigate to the Source Bucket:**
    - In the S3 dashboard, find and click on the bucket that contains the POD5 files you want to copy or move.
@@ -119,18 +125,18 @@ If you already have an AWS account and an S3 bucket with POD5 files in it, you h
 For example:
 If your bucket name is "s3://your-bucket-name/", all of the POD5 files should be immediately below this directory and there should be no subdirectories under "s3://your-bucket-name/".
 
-# Create a Key Pair
+## Create a Key Pair
 
 This is a one-time step.
 
 To create a key pair in AWS, follow these steps:
 
-## Step 1: Access the EC2 Dashboard
+### Step 1: Access the EC2 Dashboard
 
 1. **Go to EC2 Service:**
    - In the AWS Management Console, type "EC2" in the search bar and select "EC2" from the drop-down menu.
 
-## Step 2: Create a Key Pair
+### Step 2: Create a Key Pair
 
 1. **Open the Key Pairs Section:**
    - On the EC2 Dashboard, look for the "Key Pairs" option under the "Network & Security" section on the left-hand side menu.
@@ -150,7 +156,7 @@ To create a key pair in AWS, follow these steps:
 4. **Create the Key Pair:**
    - Click on "Create key pair". AWS will generate the key pair and automatically download the private key file to your computer.
 
-## Step 3: Secure the Private Key
+### Step 3: Secure the Private Key
 
 - **Save the Private Key:** The private key file will automatically download to your computer. This file is crucial for connecting to your EC2 instances securely, so store it in a safe location. If you lose this file, you will not be able to connect to your instances using this key pair.
 - **Set Permissions (Linux/macOS):** If you are using the key pair on a Linux or macOS system, run the following command to set the correct permissions:
@@ -165,18 +171,18 @@ To create a key pair in AWS, follow these steps:
 - **One-Time Download:** The private key file can only be downloaded once at the time of creation. If you lose the private key, you will need to create a new key pair and update your instances to use the new key.
 - **Accessing EC2 Instances:** When launching a new EC2 instance, you'll be able to select this key pair for SSH access. Ensure the correct permissions are set on your private key file before attempting to connect.
 
-# Create a Security Group
+## Create a Security Group
 
 This is a one-time step.
 
 To create a security group in AWS for EC2 that allows SSH logins on port 22, follow these steps:
 
-## Step 1: Access the EC2 Dashboard
+### Step 1: Access the EC2 Dashboard
 
 1. **Go to EC2 Service:**
    - In the AWS Management Console, type "EC2" in the search bar and select "EC2" from the drop-down menu.
 
-## Step 2: Create a Security Group
+### Step 2: Create a Security Group
 
 1. **Open the Security Groups Section:**
    - On the EC2 Dashboard, locate the "Security Groups" option under the "Network & Security" section in the left-hand menu.
@@ -190,7 +196,7 @@ To create a security group in AWS for EC2 that allows SSH logins on port 22, fol
    - Description: Provide a brief description of the security group, like "Security group for SSH access to EC2 instances".
    - VPC: Select the appropriate VPC (Virtual Private Cloud) where you want this security group to be used. If you only have one VPC, it will be selected by default.
 
-## Step 3: Add an Inbound Rule for SSH Access
+### Step 3: Add an Inbound Rule for SSH Access
 
 1. **Configure Inbound Rules:**
    - In the Inbound rules section, click on "Add Rule".
@@ -200,7 +206,7 @@ To create a security group in AWS for EC2 that allows SSH logins on port 22, fol
      - Alternatively, select "Anywhere" (0.0.0.0/0) to allow SSH access from any IP address, but note that this is less secure and should be used with caution.
      - You can also specify a custom IP range if you only want to allow SSH access from specific IP addresses or ranges.
 
-## Step 4: Review and Create the Security Group
+### Step 4: Review and Create the Security Group
 
 1. **Review the Rules:**
    - Review the rules you've added to ensure they match your requirements.
@@ -208,7 +214,7 @@ To create a security group in AWS for EC2 that allows SSH logins on port 22, fol
 2. **Create the Security Group:**
    - Once satisfied with the configuration, click on "Create security group".
 
-## Step 5: Attach the Security Group to an EC2 Instance
+### Step 5: Attach the Security Group to an EC2 Instance
 
 1. **During EC2 Instance Launch:**
    - When launching a new EC2 instance, you can select this security group under the "Configure Security Group" section.
