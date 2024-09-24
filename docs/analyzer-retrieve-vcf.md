@@ -11,7 +11,7 @@ GenomeSuite Analyzer will generate a **VCF** file and store it in your S3 bucket
 ## Step 2: Access the S3 Service
 
 1. **Open the S3 Dashboard:**
-   * In the AWS Management Console, type **"S3"** into the search bar and select **"S3"** from the dropdown list to navigate to the S3 service.
+   * In the AWS Management Console, type **S3** into the search bar and select **S3** from the dropdown list to navigate to the S3 service.
 
 ## Step 3: Locate the VCF File in the S3 Bucket
 
@@ -27,4 +27,4 @@ GenomeSuite Analyzer will generate a **VCF** file and store it in your S3 bucket
    * Once you locate the `sample_name.vcf.gz` file, click on the checkbox next to the file name to select it.
 
 2. **Download the File:**
-   * With the file selected, click on the **"Download"** button. The file will begin downloading to your local machine.
+   * With the file selected, click on the **Download** button. The file will begin downloading to your local machine.

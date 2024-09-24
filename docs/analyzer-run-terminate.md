@@ -48,10 +48,10 @@ To create a new AMI from a running EC2 instance using the EC2 console, follow th
 ### Step 1: Access the EC2 Console
 
 1. **Navigate to the EC2 Dashboard:**
-   * In the AWS Management Console, type "EC2" in the search bar and select "EC2" from the drop-down menu.
+   * In the AWS Management Console, type **EC2** in the search bar and select **EC2** from the drop-down menu.
 
 2. **Access the Instances Section:**
-   * In the EC2 Dashboard, click on "Instances" in the left-hand menu under the "Instances" section. This will display a list of all running EC2 instances.
+   * In the EC2 Dashboard, click on **Instances** in the left-hand menu under the **Instances** section. This will display a list of all running EC2 instances.
 
 ### Step 2: Create an AMI from the Running Instance
 
@@ -59,23 +59,23 @@ To create a new AMI from a running EC2 instance using the EC2 console, follow th
    * Locate the running instance from which you want to create an AMI. Click the checkbox next to the instance to select it.
 
 2. **Open the Instance Actions Menu:**
-   * With the instance selected, click on the "Actions" drop-down menu at the top right of the page.
+   * With the instance selected, click on the **Actions** drop-down menu at the top right of the page.
 
 3. **Select Create Image:**
-   * From the "Actions" drop-down menu, navigate to "Image and templates" and then select "Create image". This will open the Create Image dialog box.
+   * From the **Actions** drop-down menu, navigate to **Image and templates** and then select **Create image**. This will open the Create Image dialog box.
 
 4. **Configure the Image Settings:**
-   * Image Name: Enter a name for your AMI in the "Image name" field.
+   * Image Name: Enter a name for your AMI in the **Image name** field.
    * Image Description (optional): You can provide a description of the AMI for future reference.
 
 5. **Create the Image:**
-   * Once you have configured all the settings, click on the "Create image" button at the bottom of the dialog box.
+   * Once you have configured all the settings, click on the **Create image** button at the bottom of the dialog box.
 
 ### Step 3: Monitor the AMI Creation Process
 
 1. **View the Image Creation Progress:**
-   * AWS will start creating the AMI. To monitor its progress, click on "AMIs" in the left-hand menu under the "Images" section.
-   * You will see your new AMI listed with a status of "pending". Once the status changes to "available", the AMI is ready to use.
+   * AWS will start creating the AMI. To monitor its progress, click on **AMIs** in the left-hand menu under the **Images** section.
+   * You will see your new AMI listed with a status of **pending**. Once the status changes to **available**, the AMI is ready to use.
 
 ## Terminate GenomeSuite Analyzer EC2 Instance
 
@@ -86,7 +86,7 @@ To terminate an EC2 instance, follow these steps:
 ### Step 1: Access the EC2 Dashboard
 
 1. **Navigate to the Instances Section:**
-   * On the EC2 Dashboard, in the left-hand menu, click on "Instances" under the "Instances" section.
+   * On the EC2 Dashboard, in the left-hand menu, click on **Instances** under the **Instances** section.
 
 ### Step 2: Select the Instance to Terminate
 
@@ -99,11 +99,11 @@ To terminate an EC2 instance, follow these steps:
 ### Step 3: Terminate the Instance
 
 1. **Terminate the Instance:**
-   * With the instance selected, click on the "Instance state" button at the top of the page.
-   * From the dropdown menu, select "Terminate instance".
+   * With the instance selected, click on the **Instance state** button at the top of the page.
+   * From the dropdown menu, select **Terminate instance**.
 
 2. **Confirm the Termination:**
-   * A confirmation dialog will appear asking if you're sure you want to terminate the instance. Confirm by clicking "Terminate".
+   * A confirmation dialog will appear asking if you're sure you want to terminate the instance. Confirm by clicking **Terminate**.
 
 3. **Monitor Termination Process:**
-   * The instance will begin shutting down and its state will change to "shutting-down" and then to "terminated". Once terminated, the instance will no longer incur charges.
+   * The instance will begin shutting down and its state will change to **shutting-down** and then to **terminated**. Once terminated, the instance will no longer incur charges.

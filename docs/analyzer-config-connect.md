@@ -15,7 +15,7 @@ To connect to your EC2 instance using a Mac Terminal, you will first need to ins
    * Homebrew is a package manager for macOS that simplifies the installation of software. If you don't have Homebrew installed, run the following command in Terminal:
 
      ```
-     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+     /bin/bash -c **$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)**
      ```
    * Follow the on-screen instructions to complete the installation.
 
@@ -54,11 +54,11 @@ To connect to your EC2 instance using a Mac Terminal, you will first need to ins
 #### For New Users:
 1. Sign in to the AWS Management Console and navigate to the IAM (Identity and Access Management) Console.
 2. Create a New IAM User:
-   * In the IAM Dashboard, click on "Users" in the left-hand menu.
-   * Click "Add user".
-   * Provide a username and check the "Programmatic access" checkbox to generate an access key.
-   * Click "Next: Permissions" to assign appropriate permissions, either directly or by attaching a policy (e.g., AmazonS3FullAccess if you need S3 access).
-   * Follow the remaining prompts and then click "Create user".
+   * In the IAM Dashboard, click on **Users** in the left-hand menu.
+   * Click **Add user**.
+   * Provide a username and check the **Programmatic access** checkbox to generate an access key.
+   * Click **Next: Permissions** to assign appropriate permissions, either directly or by attaching a policy (e.g., AmazonS3FullAccess if you need S3 access).
+   * Follow the remaining prompts and then click **Create user**.
 3. Download or View the Access Key:
    * After creating the user, you'll see a page with the Access Key ID and Secret Access Key. You can download these credentials as a .csv file or view them directly on the page.
    * Important: This is the only time you'll be able to view the Secret Access Key, so make sure to store it securely.
@@ -66,12 +66,12 @@ To connect to your EC2 instance using a Mac Terminal, you will first need to ins
 #### For Existing Users:
 1. Sign in to the AWS Management Console and navigate to the IAM Console.
 2. Access Your Existing IAM User:
-   * In the IAM Dashboard, click on "Users" in the left-hand menu.
+   * In the IAM Dashboard, click on **Users** in the left-hand menu.
    * Click on your username to access the details.
 3. Create a New Access Key (if none exists or if you need a new one):
-   * Go to the "Security credentials" tab.
-   * Scroll down to the "Access keys" section.
-   * Click on "Create access key". AWS will generate a new Access Key ID and Secret Access Key for you.
+   * Go to the **Security credentials** tab.
+   * Scroll down to the **Access keys** section.
+   * Click on **Create access key**. AWS will generate a new Access Key ID and Secret Access Key for you.
 4. Download or View the Access Key:
    * As with new users, you'll have the option to download the key or view it once. Ensure it is stored securely.
 
@@ -130,11 +130,11 @@ To configure the AWS CLI on a Windows machine and connect to an EC2 instance, fo
 #### For New Users:
 1. Sign in to the AWS Management Console and navigate to the IAM (Identity and Access Management) Console.
 2. Create a New IAM User:
-   * In the IAM Dashboard, click on "Users" in the left-hand menu.
-   * Click "Add user".
-   * Provide a username and check the "Programmatic access" checkbox to generate an access key.
-   * Click "Next: Permissions" to assign appropriate permissions, either directly or by attaching a policy (e.g., AmazonS3FullAccess if you need S3 access).
-   * Follow the remaining prompts and then click "Create user".
+   * In the IAM Dashboard, click on **Users** in the left-hand menu.
+   * Click **Add user**.
+   * Provide a username and check the **Programmatic access** checkbox to generate an access key.
+   * Click **Next: Permissions** to assign appropriate permissions, either directly or by attaching a policy (e.g., AmazonS3FullAccess if you need S3 access).
+   * Follow the remaining prompts and then click **Create user**.
 3. Download or View the Access Key:
    * After creating the user, you'll see a page with the Access Key ID and Secret Access Key. You can download these credentials as a .csv file or view them directly on the page.
    * Important: This is the only time you'll be able to view the Secret Access Key, so make sure to store it securely.
@@ -142,12 +142,12 @@ To configure the AWS CLI on a Windows machine and connect to an EC2 instance, fo
 #### For Existing Users:
 1. Sign in to the AWS Management Console and navigate to the IAM Console.
 2. Access Your Existing IAM User:
-   * In the IAM Dashboard, click on "Users" in the left-hand menu.
+   * In the IAM Dashboard, click on **Users** in the left-hand menu.
    * Click on your username to access the details.
 3. Create a New Access Key (if none exists or if you need a new one):
-   * Go to the "Security credentials" tab.
-   * Scroll down to the "Access keys" section.
-   * Click on "Create access key". AWS will generate a new Access Key ID and Secret Access Key for you.
+   * Go to the **Security credentials** tab.
+   * Scroll down to the **Access keys** section.
+   * Click on **Create access key**. AWS will generate a new Access Key ID and Secret Access Key for you.
 4. Download or View the Access Key:
    * As with new users, you'll have the option to download the key or view it once. Ensure it is stored securely.
 
@@ -191,7 +191,7 @@ You can now access the Sniffles instance that is running on AWS EC2.
      ```
      ssh -i /path/to/your-keypair.pem ubuntu@your-instance-public-dns
      ```
-   * Replace `/path/to/your-keypair.pem` with the path to your .pem file and `your-instance-public-dns` with the Public DNS address of your EC2 instance. You can find the Public DNS in the AWS Management Console under the "Instances" section.
+   * Replace `/path/to/your-keypair.pem` with the path to your .pem file and `your-instance-public-dns` with the Public DNS address of your EC2 instance. You can find the Public DNS in the AWS Management Console under the **Instances** section.
 
 4. **Access Your EC2 Instance:**
    * Once connected, you will have shell access to your EC2 instance, allowing you to manage it as needed.
@@ -229,11 +229,11 @@ After logging into the EC2 instance, you must configure your AWS credentials by 
 #### For New Users:
 1. Sign in to the AWS Management Console and navigate to the IAM (Identity and Access Management) Console.
 2. Create a New IAM User:
-   * In the IAM Dashboard, click on "Users" in the left-hand menu.
-   * Click "Add user".
-   * Provide a username and check the "Programmatic access" checkbox to generate an access key.
-   * Click "Next: Permissions" to assign appropriate permissions, either directly or by attaching a policy (e.g., AmazonS3FullAccess if you need S3 access).
-   * Follow the remaining prompts and then click "Create user".
+   * In the IAM Dashboard, click on **Users** in the left-hand menu.
+   * Click **Add user**.
+   * Provide a username and check the **Programmatic access** checkbox to generate an access key.
+   * Click **Next: Permissions** to assign appropriate permissions, either directly or by attaching a policy (e.g., AmazonS3FullAccess if you need S3 access).
+   * Follow the remaining prompts and then click **Create user**.
 3. Download or View the Access Key:
    * After creating the user, you'll see a page with the Access Key ID and Secret Access Key. You can download these credentials as a .csv file or view them directly on the page.
    * Important: This is the only time you'll be able to view the Secret Access Key, so make sure to store it securely.
@@ -241,12 +241,12 @@ After logging into the EC2 instance, you must configure your AWS credentials by 
 #### For Existing Users:
 1. Sign in to the AWS Management Console and navigate to the IAM Console.
 2. Access Your Existing IAM User:
-   * In the IAM Dashboard, click on "Users" in the left-hand menu.
+   * In the IAM Dashboard, click on **Users** in the left-hand menu.
    * Click on your username to access the details.
 3. Create a New Access Key (if none exists or if you need a new one):
-   * Go to the "Security credentials" tab.
-   * Scroll down to the "Access keys" section.
-   * Click on "Create access key". AWS will generate a new Access Key ID and Secret Access Key for you.
+   * Go to the **Security credentials** tab.
+   * Scroll down to the **Access keys** section.
+   * Click on **Create access key**. AWS will generate a new Access Key ID and Secret Access Key for you.
 4. Download or View the Access Key:
    * As with new users, you'll have the option to download the key or view it once. Ensure it is stored securely.
 
