@@ -1,0 +1,37 @@
+name: Documentation build
+
+on:
+  pull_request:
+    types: [synchronize, opened, reopened]
+    paths:
+    - 'docs/**/*'
+    - 'docs/requirements.txt'
+    - 'mkdocs.yml'
+    - '.github/workflows/doc-build.yml'
+  workflow_dispatch:
+
+jobs:
+  create-docs-package:
+    name: Create documentation package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install Python requirements
+        run: |
+          eval `ssh-agent -s`
+          ssh-add - <<< '${{ secrets.MKDOCS_MATERIALS_SSH_KEY }}'
+          pip install -r docs/requirements.txt
+
+      - name: Build mkdocs
+        run: python -m mkdocs build --strict -d ./out
+
+      - name: Upload documentation artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: docs
+          path: out
+          retention-days: 7
