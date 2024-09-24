@@ -1,0 +1,895 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://the-sequencing-center.github.io/genomesuite-docs/analyzer-run-terminate.html">
+      
+      
+        <link rel="prev" href="analyzer-config-connect.html">
+      
+      
+        <link rel="next" href="analyzer-retrieve-vcf.html">
+      
+      
+      <link rel="icon" href="assets/tsc-logo.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
+    
+    
+      
+        <title>Running and Terminating GenomeSuite Analyzer - GenomeSuite Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.06209087.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#running-and-terminating-genomesuite-analyzer" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="GenomeSuite Documentation" class="md-header__button md-logo" aria-label="GenomeSuite Documentation" data-md-component="logo">
+      
+  <img src="assets/tsc-logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GenomeSuite Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Running and Terminating GenomeSuite Analyzer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="GenomeSuite Documentation" class="md-nav__button md-logo" aria-label="GenomeSuite Documentation" data-md-component="logo">
+      
+  <img src="assets/tsc-logo.jpg" alt="logo">
+
+    </a>
+    GenomeSuite Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GenomeSuite Analyzer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            GenomeSuite Analyzer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-getting-started.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-launch.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Launching GenomeSuite Analyzer on EC2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-config-connect.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring and Connecting to the EC2 Instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Running and Terminating GenomeSuite Analyzer
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="analyzer-run-terminate.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Running and Terminating GenomeSuite Analyzer
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigate-to-the-genomesuite-analyzer-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigate to the GenomeSuite Analyzer Directory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-genomesuite-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run GenomeSuite Analyzer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitor-genomesuite-analyzer-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitor GenomeSuite Analyzer Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-ami" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a New AMI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a New AMI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-access-the-ec2-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Access the EC2 Console
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-an-ami-from-the-running-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create an AMI from the Running Instance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-monitor-the-ami-creation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Monitor the AMI Creation Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminate-genomesuite-analyzer-ec2-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminate GenomeSuite Analyzer EC2 Instance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminate GenomeSuite Analyzer EC2 Instance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-access-the-ec2-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Access the EC2 Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-select-the-instance-to-terminate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Select the Instance to Terminate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-terminate-the-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Terminate the Instance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-retrieve-vcf.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retrieving the VCF File
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigate-to-the-genomesuite-analyzer-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigate to the GenomeSuite Analyzer Directory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-genomesuite-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run GenomeSuite Analyzer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitor-genomesuite-analyzer-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitor GenomeSuite Analyzer Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-ami" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a New AMI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a New AMI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-access-the-ec2-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Access the EC2 Console
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-an-ami-from-the-running-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create an AMI from the Running Instance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-monitor-the-ami-creation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Monitor the AMI Creation Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminate-genomesuite-analyzer-ec2-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminate GenomeSuite Analyzer EC2 Instance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminate GenomeSuite Analyzer EC2 Instance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-access-the-ec2-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Access the EC2 Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-select-the-instance-to-terminate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Select the Instance to Terminate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-terminate-the-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Terminate the Instance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="running-and-terminating-genomesuite-analyzer">Running and Terminating GenomeSuite Analyzer<a class="headerlink" href="#running-and-terminating-genomesuite-analyzer" title="Permanent link">&para;</a></h1>
+<p>To run GenomeSuite Analyzer on the EC2 instance, follow these steps:</p>
+<h2 id="navigate-to-the-genomesuite-analyzer-directory">Navigate to the GenomeSuite Analyzer Directory<a class="headerlink" href="#navigate-to-the-genomesuite-analyzer-directory" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Change to the Home Directory:</strong></li>
+<li>Once logged in, you should already be in the <code>/home/ubuntu</code> directory. To confirm, run:
+     <div class="highlight"><pre><span></span><code>cd /home/ubuntu
+</code></pre></div></li>
+<li>
+<p>If you're already there, this command won't change anything.</p>
+</li>
+<li>
+<p><strong>Navigate to the GenomeSuite Analyzer Distribution Directory:</strong></p>
+</li>
+<li>Run the following command to change into the GenomeSuite Analyzer distribution directory:
+     <div class="highlight"><pre><span></span><code>cd Sniffles/dist
+</code></pre></div></li>
+</ol>
+<h2 id="run-genomesuite-analyzer">Run GenomeSuite Analyzer<a class="headerlink" href="#run-genomesuite-analyzer" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Run GenomeSuite Analyzer with the Required Parameters:</strong></li>
+<li>Execute GenomeSuite Analyzer by running the following command:
+     <div class="highlight"><pre><span></span><code>./sniffles -b bucketname -s samplename
+</code></pre></div></li>
+<li>Replace <code>bucketname</code> with the name of the S3 bucket where your POD5 files are stored.</li>
+<li>Replace <code>samplename</code> with an arbitrary name of your choice for the sample being processed.</li>
+</ol>
+<p><strong>Example Command:</strong>
+If your S3 bucket is named <code>sniffles-sample</code> and your sample name is <code>sample1</code>, the command would look like this:
+<div class="highlight"><pre><span></span><code>./sniffles -b sniffles-sample -s sample1
+</code></pre></div></p>
+<h2 id="monitor-genomesuite-analyzer-output">Monitor GenomeSuite Analyzer Output<a class="headerlink" href="#monitor-genomesuite-analyzer-output" title="Permanent link">&para;</a></h2>
+<ul>
+<li>GenomeSuite Analyzer will start processing the data. You should see output in the terminal indicating the progress of the operation. Depending on the size of the dataset, this may take some time.</li>
+</ul>
+<h2 id="create-a-new-ami">Create a New AMI<a class="headerlink" href="#create-a-new-ami" title="Permanent link">&para;</a></h2>
+<p>This is a <strong>one-time</strong> step.</p>
+<p>When the GenomeSuite Analyzer job is done, and before terminating the running EC2 instance, it is VERY IMPORTANT that you create a new AMI. By creating a new AMI you will save all your configuration settings from above. You can then use this new AMI for all future runs. </p>
+<p>To create a new AMI from a running EC2 instance using the EC2 console, follow these steps:</p>
+<h3 id="step-1-access-the-ec2-console">Step 1: Access the EC2 Console<a class="headerlink" href="#step-1-access-the-ec2-console" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Navigate to the EC2 Dashboard:</strong></li>
+<li>
+<p>In the AWS Management Console, type "EC2" in the search bar and select "EC2" from the drop-down menu.</p>
+</li>
+<li>
+<p><strong>Access the Instances Section:</strong></p>
+</li>
+<li>In the EC2 Dashboard, click on "Instances" in the left-hand menu under the "Instances" section. This will display a list of all running EC2 instances.</li>
+</ol>
+<h3 id="step-2-create-an-ami-from-the-running-instance">Step 2: Create an AMI from the Running Instance<a class="headerlink" href="#step-2-create-an-ami-from-the-running-instance" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Select the Instance:</strong></li>
+<li>
+<p>Locate the running instance from which you want to create an AMI. Click the checkbox next to the instance to select it.</p>
+</li>
+<li>
+<p><strong>Open the Instance Actions Menu:</strong></p>
+</li>
+<li>
+<p>With the instance selected, click on the "Actions" drop-down menu at the top right of the page.</p>
+</li>
+<li>
+<p><strong>Select Create Image:</strong></p>
+</li>
+<li>
+<p>From the "Actions" drop-down menu, navigate to "Image and templates" and then select "Create image". This will open the Create Image dialog box.</p>
+</li>
+<li>
+<p><strong>Configure the Image Settings:</strong></p>
+</li>
+<li>Image Name: Enter a name for your AMI in the "Image name" field.</li>
+<li>
+<p>Image Description (optional): You can provide a description of the AMI for future reference.</p>
+</li>
+<li>
+<p><strong>Create the Image:</strong></p>
+</li>
+<li>Once you have configured all the settings, click on the "Create image" button at the bottom of the dialog box.</li>
+</ol>
+<h3 id="step-3-monitor-the-ami-creation-process">Step 3: Monitor the AMI Creation Process<a class="headerlink" href="#step-3-monitor-the-ami-creation-process" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>View the Image Creation Progress:</strong></li>
+<li>AWS will start creating the AMI. To monitor its progress, click on "AMIs" in the left-hand menu under the "Images" section.</li>
+<li>You will see your new AMI listed with a status of "pending". Once the status changes to "available", the AMI is ready to use.</li>
+</ol>
+<h2 id="terminate-genomesuite-analyzer-ec2-instance">Terminate GenomeSuite Analyzer EC2 Instance<a class="headerlink" href="#terminate-genomesuite-analyzer-ec2-instance" title="Permanent link">&para;</a></h2>
+<p>When the GenomeSuite Analyzer job is finished, it's very important that you terminate the running GenomeSuite Analyzer EC2 instance. You do not want to accumulate unnecessary charges by letting the instance continue running.</p>
+<p>To terminate an EC2 instance, follow these steps:</p>
+<h3 id="step-1-access-the-ec2-dashboard">Step 1: Access the EC2 Dashboard<a class="headerlink" href="#step-1-access-the-ec2-dashboard" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Navigate to the Instances Section:</strong></li>
+<li>On the EC2 Dashboard, in the left-hand menu, click on "Instances" under the "Instances" section.</li>
+</ol>
+<h3 id="step-2-select-the-instance-to-terminate">Step 2: Select the Instance to Terminate<a class="headerlink" href="#step-2-select-the-instance-to-terminate" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Find the Instance:</strong></li>
+<li>
+<p>Locate the instance you want to terminate. You can use the search bar at the top to filter instances by name, instance ID, or other attributes.</p>
+</li>
+<li>
+<p><strong>Select the Instance:</strong></p>
+</li>
+<li>Click the checkbox next to the instance you want to terminate to select it.</li>
+</ol>
+<h3 id="step-3-terminate-the-instance">Step 3: Terminate the Instance<a class="headerlink" href="#step-3-terminate-the-instance" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Terminate the Instance:</strong></li>
+<li>With the instance selected, click on the "Instance state" button at the top of the page.</li>
+<li>
+<p>From the dropdown menu, select "Terminate instance".</p>
+</li>
+<li>
+<p><strong>Confirm the Termination:</strong></p>
+</li>
+<li>
+<p>A confirmation dialog will appear asking if you're sure you want to terminate the instance. Confirm by clicking "Terminate".</p>
+</li>
+<li>
+<p><strong>Monitor Termination Process:</strong></p>
+</li>
+<li>The instance will begin shutting down and its state will change to "shutting-down" and then to "terminated". Once terminated, the instance will no longer incur charges.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; The Sequencing Center 2024
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.tooltips", "content.tabs.link", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "toc.follow"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>

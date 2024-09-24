@@ -1,0 +1,1167 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://the-sequencing-center.github.io/genomesuite-docs/analyzer-getting-started.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="analyzer-launch.html">
+      
+      
+      <link rel="icon" href="assets/tsc-logo.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
+    
+    
+      
+        <title>Getting Started - GenomeSuite Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.06209087.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="GenomeSuite Documentation" class="md-header__button md-logo" aria-label="GenomeSuite Documentation" data-md-component="logo">
+      
+  <img src="assets/tsc-logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GenomeSuite Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="GenomeSuite Documentation" class="md-nav__button md-logo" aria-label="GenomeSuite Documentation" data-md-component="logo">
+      
+  <img src="assets/tsc-logo.jpg" alt="logo">
+
+    </a>
+    GenomeSuite Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GenomeSuite Analyzer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            GenomeSuite Analyzer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="analyzer-getting-started.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-aws-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create AWS Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-to-aws-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login to AWS Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-s3-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an S3 Bucket
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-pod5-files-to-s3-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload POD5 Files to S3 Bucket
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-pod5-files-in-s3-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Store POD5 Files in S3 Bucket
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Store POD5 Files in S3 Bucket">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-aws-management-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the AWS Management Console
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-key-pair" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a Key Pair
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a Key Pair">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-access-the-ec2-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Access the EC2 Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-a-key-pair" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create a Key Pair
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-secure-the-private-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Secure the Private Key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-security-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a Security Group
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a Security Group">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-access-the-ec2-dashboard_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Access the EC2 Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-a-security-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create a Security Group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-add-an-inbound-rule-for-ssh-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Add an Inbound Rule for SSH Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-review-and-create-the-security-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Review and Create the Security Group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-attach-the-security-group-to-an-ec2-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Attach the Security Group to an EC2 Instance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-launch.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Launching GenomeSuite Analyzer on EC2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-config-connect.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring and Connecting to the EC2 Instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-run-terminate.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running and Terminating GenomeSuite Analyzer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-retrieve-vcf.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retrieving the VCF File
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-aws-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create AWS Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-to-aws-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login to AWS Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-s3-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an S3 Bucket
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-pod5-files-to-s3-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload POD5 Files to S3 Bucket
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-pod5-files-in-s3-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Store POD5 Files in S3 Bucket
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Store POD5 Files in S3 Bucket">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-aws-management-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the AWS Management Console
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-key-pair" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a Key Pair
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a Key Pair">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-access-the-ec2-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Access the EC2 Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-a-key-pair" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create a Key Pair
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-secure-the-private-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Secure the Private Key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-security-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a Security Group
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a Security Group">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-access-the-ec2-dashboard_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Access the EC2 Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-a-security-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create a Security Group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-add-an-inbound-rule-for-ssh-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Add an Inbound Rule for SSH Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-review-and-create-the-security-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Review and Create the Security Group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-attach-the-security-group-to-an-ec2-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Attach the Security Group to an EC2 Instance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
+<p>GenomeSuite Analyzer runs on the <a href="https://aws.amazon.com/">Amazon Web Services (AWS)</a> platform.<br />
+<em> If you do not have an AWS account, start with the "Create AWS Account" instructions below.<br />
+</em> If you do have an AWS account, you can skip to the step "Login to AWS Account".</p>
+<p>Some steps are identified as a “<strong>one-time step</strong>”.  This means you should only have to perform this step once during initial setup.</p>
+<h2 id="create-aws-account">Create AWS Account<a class="headerlink" href="#create-aws-account" title="Permanent link">&para;</a></h2>
+<p>This is a <strong>one-time</strong> step.</p>
+<p>To create an AWS account, follow these steps:</p>
+<ol>
+<li><strong>Open the AWS Sign-Up Page:</strong></li>
+<li>
+<p>Go to AWS's account creation page and click on "Create an AWS Account".</p>
+</li>
+<li>
+<p><strong>Enter Your Account Information:</strong></p>
+</li>
+<li>Provide your email address and AWS account name. After entering the details, click on "Verify email address". You'll receive an email with a verification code that you need to enter on the signup page.</li>
+<li>
+<p>Set up your root user password and confirm it.</p>
+</li>
+<li>
+<p><strong>Add Contact Information:</strong></p>
+</li>
+<li>Choose between a Personal or Professional account. The features and functions are the same, but the information required might differ slightly.</li>
+<li>
+<p>Fill in your contact information and read the AWS Customer Agreement. Once done, click "Continue".</p>
+</li>
+<li>
+<p><strong>Enter Payment Information:</strong></p>
+</li>
+<li>
+<p>Provide a valid payment method (credit/debit card). This step is mandatory even if you plan to use the free tier services. You may also need to verify your payment method by entering a code sent by AWS.</p>
+</li>
+<li>
+<p><strong>Verify Your Phone Number:</strong></p>
+</li>
+<li>
+<p>AWS will ask you to provide a phone number to verify your identity. You'll receive a call or SMS with a verification code that you need to enter to proceed.</p>
+</li>
+<li>
+<p><strong>Select a Support Plan:</strong></p>
+</li>
+<li>
+<p>Choose one of the available support plans (Basic, Developer, Business, or Enterprise). The Basic support plan is free.</p>
+</li>
+<li>
+<p><strong>Complete the Sign-Up Process:</strong></p>
+</li>
+<li>After selecting your support plan, AWS will begin activating your account. This process usually takes a few minutes but can take up to 24 hours. Once activation is complete, you'll receive a confirmation email.</li>
+</ol>
+<p>After your account is activated, you can sign in to the AWS Management Console and start using AWS services.</p>
+<h2 id="login-to-aws-account">Login to AWS Account<a class="headerlink" href="#login-to-aws-account" title="Permanent link">&para;</a></h2>
+<p>To log in to your AWS account, follow these steps:</p>
+<ol>
+<li><strong>Navigate to the AWS Management Console:</strong></li>
+<li>
+<p>Open your web browser and go to the AWS Management Console login page.</p>
+</li>
+<li>
+<p><strong>Enter Your Account Credentials:</strong></p>
+</li>
+<li>On the login page, you'll see two options:<ul>
+<li>Root user: Use this if you are logging in as the account owner or the main administrator.</li>
+<li>IAM user: Use this if you have been assigned a user account within an AWS organization.</li>
+</ul>
+</li>
+<li>If you are the root user, click on "Root user" and enter your email address associated with the AWS account. Click "Next".</li>
+<li>
+<p>If you are an IAM user, click on "IAM user" and enter your IAM username along with the account ID or alias. Click "Next".</p>
+</li>
+<li>
+<p><strong>Enter Your Password:</strong></p>
+</li>
+<li>
+<p>Enter the password for your account, and click "Sign In".</p>
+</li>
+<li>
+<p><strong>Multi-Factor Authentication (MFA) (if enabled):</strong></p>
+</li>
+<li>
+<p>If Multi-Factor Authentication (MFA) is enabled for your account, you will be prompted to enter the code from your authentication device (like a mobile app). Enter the code and proceed.</p>
+</li>
+<li>
+<p><strong>Access the AWS Management Console:</strong></p>
+</li>
+<li>After successful authentication, you will be directed to the AWS Management Console, where you can start managing your AWS services.</li>
+</ol>
+<h2 id="create-an-s3-bucket">Create an S3 Bucket<a class="headerlink" href="#create-an-s3-bucket" title="Permanent link">&para;</a></h2>
+<p>This is a <strong>one-time</strong> step.</p>
+<p>You will now create an AWS S3 bucket that will contain all of your Nanopore POD5 sample files. To create an S3 bucket in your AWS account, follow these steps:</p>
+<ol>
+<li><strong>Access the S3 Service:</strong></li>
+<li>
+<p>Once you're in the console, type "S3" into the search bar at the top and select "S3" from the drop-down list. This will take you to the Amazon S3 dashboard.</p>
+</li>
+<li>
+<p><strong>Start the Bucket Creation Process:</strong></p>
+</li>
+<li>
+<p>On the S3 dashboard, click the "Create bucket" button.</p>
+</li>
+<li>
+<p><strong>Configure the Bucket Settings:</strong></p>
+</li>
+<li>Bucket Name: Enter a name for the bucket in the Bucket name field.<ul>
+<li>Bucket names must be globally unique across all existing bucket names in Amazon S3. If you choose a name that is already taken, you'll have to try other names until you find a unique name.</li>
+<li>The name must not contain spaces and must adhere to the bucket naming rules (e.g., lowercase letters, numbers, and hyphens).</li>
+</ul>
+</li>
+<li>
+<p>Region: Select the region "US East (N. Virginia) us-east-1". This is the region where the S3 bucket will be created.</p>
+</li>
+<li>
+<p><strong>Set Bucket Options:</strong></p>
+</li>
+<li>Block Public Access Settings: By default, S3 buckets are set to block all public access. You can leave this option enabled unless you specifically need the bucket to be public.</li>
+<li>Bucket Versioning: If you want to enable versioning, which keeps multiple versions of an object in the same bucket, you can do so here. This is optional.</li>
+<li>
+<p>Tags, Object Lock, and Encryption: You can add tags, enable object lock, and set default encryption if needed, but these are optional and can be configured later.</p>
+</li>
+<li>
+<p><strong>Review and Create the Bucket:</strong></p>
+</li>
+<li>
+<p>After configuring the settings, review your choices and click "Create bucket".</p>
+</li>
+<li>
+<p><strong>Verify Bucket Creation:</strong></p>
+</li>
+<li>After the bucket is created, you will be taken back to the S3 dashboard, where you should see Bucket name listed among your S3 buckets.</li>
+</ol>
+<h2 id="upload-pod5-files-to-s3-bucket">Upload POD5 Files to S3 Bucket<a class="headerlink" href="#upload-pod5-files-to-s3-bucket" title="Permanent link">&para;</a></h2>
+<p>There are several methods available for uploading POD5 files to S3 buckets. These methods are beyond the scope of this document. For human whole genome sequencing, the aggregate size of these files is quite large, ca. 1TB or more, and may need special methods to upload in reasonable time. Please contact us at support@thesequencingcenter.com to review and discuss options for uploading large datasets.</p>
+<h2 id="store-pod5-files-in-s3-bucket">Store POD5 Files in S3 Bucket<a class="headerlink" href="#store-pod5-files-in-s3-bucket" title="Permanent link">&para;</a></h2>
+<p>If you already have an AWS account and an S3 bucket with POD5 files in it, you have two choices. You can use the existing Bucket name with Sniffles. Or you can copy or move the POD5 files from the existing bucket to another bucket within the same AWS account. To copy or move files, follow these instructions:</p>
+<h3 id="using-the-aws-management-console">Using the AWS Management Console<a class="headerlink" href="#using-the-aws-management-console" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Navigate to the Source Bucket:</strong></li>
+<li>
+<p>In the S3 dashboard, find and click on the bucket that contains the POD5 files you want to copy or move.</p>
+</li>
+<li>
+<p><strong>Select the Files:</strong></p>
+</li>
+<li>
+<p>Browse through the folders in your source bucket and select the files you want to copy or move. You can select multiple files by holding the Ctrl key (or Cmd on Mac) while clicking.</p>
+</li>
+<li>
+<p><strong>Choose the Copy or Move Option:</strong></p>
+</li>
+<li>
+<p>After selecting the files, click on the "Actions" button at the top of the screen, and choose either "Copy" or "Move".</p>
+</li>
+<li>
+<p><strong>Specify the Destination Bucket:</strong></p>
+</li>
+<li>A dialog box will appear asking where you want to copy or move the files.</li>
+<li>In the "Destination" field, click "Browse S3" and navigate to the destination bucket.</li>
+<li>
+<p>You can specify the exact location within the bucket by selecting a folder or leave it blank to place the files directly in the bucket's root.</p>
+</li>
+<li>
+<p><strong>Confirm the Operation:</strong></p>
+</li>
+<li>
+<p>Once the destination is set, click on "Copy" or "Move" to begin the operation. Depending on the size and number of files, this may take a few moments.</p>
+</li>
+<li>
+<p><strong>Verify the Transfer:</strong></p>
+</li>
+<li>Navigate to the destination bucket and verify that the files have been successfully copied or moved.</li>
+</ol>
+<p><strong>Important Note:</strong>
+- In the S3 bucket that contains the POD5 files, make sure that all of the files are in the directory just below the S3 bucket name. There should be no other subdirectories under the main directory.</p>
+<p>For example:
+If your bucket name is "s3://your-bucket-name/", all of the POD5 files should be immediately below this directory and there should be no subdirectories under "s3://your-bucket-name/".</p>
+<h2 id="create-a-key-pair">Create a Key Pair<a class="headerlink" href="#create-a-key-pair" title="Permanent link">&para;</a></h2>
+<p>This is a one-time step.</p>
+<p>To create a key pair in AWS, follow these steps:</p>
+<h3 id="step-1-access-the-ec2-dashboard">Step 1: Access the EC2 Dashboard<a class="headerlink" href="#step-1-access-the-ec2-dashboard" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Go to EC2 Service:</strong></li>
+<li>In the AWS Management Console, type "EC2" in the search bar and select "EC2" from the drop-down menu.</li>
+</ol>
+<h3 id="step-2-create-a-key-pair">Step 2: Create a Key Pair<a class="headerlink" href="#step-2-create-a-key-pair" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Open the Key Pairs Section:</strong></li>
+<li>On the EC2 Dashboard, look for the "Key Pairs" option under the "Network &amp; Security" section on the left-hand side menu.</li>
+<li>
+<p>Click on "Key Pairs" to open the key pair management page.</p>
+</li>
+<li>
+<p><strong>Create a New Key Pair:</strong></p>
+</li>
+<li>
+<p>Click the "Create Key Pair" button.</p>
+</li>
+<li>
+<p><strong>Configure Key Pair Settings:</strong></p>
+</li>
+<li>Name: Enter a name for your key pair, such as "sniffles-keypair". The name must be unique within your AWS region.</li>
+<li>Key Pair Type: Choose the key pair type, typically "ED25519".</li>
+<li>Private Key File Format: Choose the format for the private key file. Options include:<ul>
+<li>.pem: For SSH clients (like OpenSSH) on Linux or macOS.</li>
+<li>.ppk: For PuTTY, a popular SSH client on Windows.</li>
+</ul>
+</li>
+<li>
+<p>Tags: (Optional) You can add tags to your key pair for easier management.</p>
+</li>
+<li>
+<p><strong>Create the Key Pair:</strong></p>
+</li>
+<li>Click on "Create key pair". AWS will generate the key pair and automatically download the private key file to your computer.</li>
+</ol>
+<h3 id="step-3-secure-the-private-key">Step 3: Secure the Private Key<a class="headerlink" href="#step-3-secure-the-private-key" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Save the Private Key:</strong> The private key file will automatically download to your computer. This file is crucial for connecting to your EC2 instances securely, so store it in a safe location. If you lose this file, you will not be able to connect to your instances using this key pair.</li>
+<li><strong>Set Permissions (Linux/macOS):</strong> If you are using the key pair on a Linux or macOS system, run the following command to set the correct permissions:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>chmod 400 /path/to/your-keypair.pem
+</code></pre></div>
+<ul>
+<li><strong>Store Securely:</strong> Make sure the private key is stored securely. Do not share it with anyone or commit it to version control systems like Git.</li>
+</ul>
+<p><strong>Important Notes:</strong>
+- <strong>One-Time Download:</strong> The private key file can only be downloaded once at the time of creation. If you lose the private key, you will need to create a new key pair and update your instances to use the new key.
+- <strong>Accessing EC2 Instances:</strong> When launching a new EC2 instance, you'll be able to select this key pair for SSH access. Ensure the correct permissions are set on your private key file before attempting to connect.</p>
+<h2 id="create-a-security-group">Create a Security Group<a class="headerlink" href="#create-a-security-group" title="Permanent link">&para;</a></h2>
+<p>This is a one-time step.</p>
+<p>To create a security group in AWS for EC2 that allows SSH logins on port 22, follow these steps:</p>
+<h3 id="step-1-access-the-ec2-dashboard_1">Step 1: Access the EC2 Dashboard<a class="headerlink" href="#step-1-access-the-ec2-dashboard_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Go to EC2 Service:</strong></li>
+<li>In the AWS Management Console, type "EC2" in the search bar and select "EC2" from the drop-down menu.</li>
+</ol>
+<h3 id="step-2-create-a-security-group">Step 2: Create a Security Group<a class="headerlink" href="#step-2-create-a-security-group" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Open the Security Groups Section:</strong></li>
+<li>On the EC2 Dashboard, locate the "Security Groups" option under the "Network &amp; Security" section in the left-hand menu.</li>
+<li>
+<p>Click on "Security Groups" to open the security group management page.</p>
+</li>
+<li>
+<p><strong>Create a New Security Group:</strong></p>
+</li>
+<li>
+<p>Click on the "Create security group" button.</p>
+</li>
+<li>
+<p><strong>Configure Security Group Settings:</strong></p>
+</li>
+<li>Name: Enter a name for your security group, such as "sniffles-sg".</li>
+<li>Description: Provide a brief description of the security group, like "Security group for SSH access to EC2 instances".</li>
+<li>VPC: Select the appropriate VPC (Virtual Private Cloud) where you want this security group to be used. If you only have one VPC, it will be selected by default.</li>
+</ol>
+<h3 id="step-3-add-an-inbound-rule-for-ssh-access">Step 3: Add an Inbound Rule for SSH Access<a class="headerlink" href="#step-3-add-an-inbound-rule-for-ssh-access" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Configure Inbound Rules:</strong></li>
+<li>In the Inbound rules section, click on "Add Rule".</li>
+<li>Type: From the drop-down list, select "SSH". This will automatically set the Port Range to 22.</li>
+<li>Source:<ul>
+<li>You can choose "My IP" to allow SSH access only from your current IP address.</li>
+<li>Alternatively, select "Anywhere" (0.0.0.0/0) to allow SSH access from any IP address, but note that this is less secure and should be used with caution.</li>
+<li>You can also specify a custom IP range if you only want to allow SSH access from specific IP addresses or ranges.</li>
+</ul>
+</li>
+</ol>
+<h3 id="step-4-review-and-create-the-security-group">Step 4: Review and Create the Security Group<a class="headerlink" href="#step-4-review-and-create-the-security-group" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Review the Rules:</strong></li>
+<li>
+<p>Review the rules you've added to ensure they match your requirements.</p>
+</li>
+<li>
+<p><strong>Create the Security Group:</strong></p>
+</li>
+<li>Once satisfied with the configuration, click on "Create security group".</li>
+</ol>
+<h3 id="step-5-attach-the-security-group-to-an-ec2-instance">Step 5: Attach the Security Group to an EC2 Instance<a class="headerlink" href="#step-5-attach-the-security-group-to-an-ec2-instance" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>During EC2 Instance Launch:</strong></li>
+<li>
+<p>When launching a new EC2 instance, you can select this security group under the "Configure Security Group" section.</p>
+</li>
+<li>
+<p><strong>For Existing Instances:</strong></p>
+</li>
+<li>If you want to assign this security group to an existing instance, go to the "Instances" section, select your instance, click "Actions" &gt; "Networking" &gt; "Change Security Groups", and then select the "sniffles-sg" security group.</li>
+</ol>
+<p><strong>Important Notes:</strong>
+- <strong>Security Considerations:</strong> Allowing SSH access from any IP address (0.0.0.0/0) is convenient but can expose your instance to potential attacks. It's recommended to restrict access to specific IP addresses whenever possible.
+- <strong>Firewall Settings:</strong> Ensure that any local firewalls on your machine or network allow outbound connections on port 22.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; The Sequencing Center 2024
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.tooltips", "content.tabs.link", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "toc.follow"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
