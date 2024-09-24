@@ -41,6 +41,9 @@ jobs:
       - name: Install PDFtk
         run: sudo apt-get install -y pdftk
 
+      - name: Install pdfunite
+        run: sudo apt-get install -y poppler-utils
+
       - name: Generate Dynamic Cover Page
         run: |
           mkdir -p output
