@@ -41,33 +41,35 @@ jobs:
       - name: Install PDFtk
         run: sudo apt-get install -y pdftk
 
-      - name: Generate Dynamic Cover Page
+            - name: Generate Dynamic Cover Page
         run: |
           mkdir -p output
           echo "# Genome Suite Analyzer User Guide for AWS" > output/cover-page.md
-          echo "## The Sequencing Center"
-          echo "## Date: $(date '+%Y-%m-%d')" >> output/cover-page.md
-          echo "### Repository: ${{ github.repository }}" >> output/cover-page.md
-          echo "**Website:** [wwww.thesequencingcenter.com](http://www.thesequencingcenter.com)" >> output/cover-page.md
-          echo "" >> output/cover-page.md
-          echo "**Support:** [support@thesequencingcenter.com](support@thesequencingcenter.com)" >> output/cover-page.md
-          echo "" >> output/cover-page.md
-          echo "**Phone:** +1 877-425-2235" >> output/cover-page.md
-          echo "" >> output/cover-page.md
+          cat <<EOL >> output/cover-page.md
+          ## The Sequencing Center
+          ## Date: $(date '+%Y-%m-%d')
+          ### Repository: ${{ github.repository }}
+          **Website:** [www.thesequencingcenter.com](http://www.thesequencingcenter.com)
 
+          **Support:** [support@thesequencingcenter.com](mailto:support@thesequencingcenter.com)
 
-      - name: Combine and Order Markdown Files into One PDF
+          **Phone:** +1 877-425-2235
+          EOL
+          pandoc output/cover-page.md -o output/cover-page.pdf
+
+      - name: Combine Markdown Files and Generate TOC PDF
         run: |
-          mkdir -p output
-          ls -R  # Debugging: list all files to ensure correct paths
-          pandoc output/cover-page.md \
-                 --toc \
-                 docs/analyzer-getting-started.md \
+          pandoc docs/analyzer-getting-started.md \
                  docs/analyzer-launch.md \
                  docs/analyzer-config-connect.md \
                  docs/analyzer-run-terminate.md \
                  docs/analyzer-retrieve-vcf.md \
-                 -o output/GenomeSuiteDocs.pdf
+                 --toc \
+                 -o output/docs.pdf
+
+      - name: Merge PDFs
+        run: |
+          pdfunite output/cover-page.pdf output/docs.pdf output/GenomeSuiteDocs.pdf
 
       - name: Upload Combined PDF as Artifact
         uses: actions/upload-artifact@v3
@@ -79,7 +81,7 @@ jobs:
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          git add output/GenomeSuiteDocs.pdf  # Add the PDF file to Git
+          git add output/GenomeSuiteDocs.pdf
           git add site/  # Add other untracked files if necessary (e.g., your site directory)
-          git commit -m "Add generated PDFs"
+          git commit -m "Add generated PDFs" || echo "No changes to commit"
           git push origin main
