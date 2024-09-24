@@ -49,7 +49,9 @@ jobs:
           echo "## Date: $(date '+%Y-%m-%d')" >> output/cover-page.md
           echo "### Repository: ${{ github.repository }}" >> output/cover-page.md
           echo "**Website:** [wwww.thesequencingcenter.com](http://www.thesequencingcenter.com)" >> output/cover-page.md
+          echo "" >> output/cover-page.md
           echo "**Support:** [support@thesequencingcenter.com](support@thesequencingcenter.com)" >> output/cover-page.md
+          echo "" >> output/cover-page.md
           echo "**Phone:** +1 877-425-2235" >> output/cover-page.md
           echo "" >> output/cover-page.md
 
@@ -59,12 +61,13 @@ jobs:
           mkdir -p output
           ls -R  # Debugging: list all files to ensure correct paths
           pandoc output/cover-page.md \
+                --toc \
                  docs/analyzer-getting-started.md \
                  docs/analyzer-launch.md \
                  docs/analyzer-config-connect.md \
                  docs/analyzer-run-terminate.md \
                  docs/analyzer-retrieve-vcf.md \
-                 -o output/GenomeSuiteDocs.pdf --toc
+                 -o output/GenomeSuiteDocs.pdf
 
       - name: Upload Combined PDF as Artifact
         uses: actions/upload-artifact@v3
