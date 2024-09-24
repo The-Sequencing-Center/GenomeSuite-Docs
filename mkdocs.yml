@@ -1,11 +1,11 @@
-site_name: The Sequencing Center Intranet
-site_url: 
+site_name: GenomeSuite Documentation
+site_url: https://the-sequencing-center.github.io/genomesuite-docs
 use_directory_urls: false
 
 theme:
   name: material
   palette:
-    - scheme: custom-blue
+    - scheme: blue
       toggle:
         icon: material/lightbulb-outline
         name: Switch to dark mode
@@ -26,7 +26,7 @@ theme:
     - toc.follow
 
 copyright:
-  Copyright &copy; 2024
+  Copyright &copy; The Sequencing Center 2024
 
 markdown_extensions:
   - abbr
