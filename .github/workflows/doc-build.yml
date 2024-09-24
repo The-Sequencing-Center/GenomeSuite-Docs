@@ -2,15 +2,19 @@ name: doc-build
 on:
   push:
     branches:
-      - master 
       - main
+
 permissions:
   contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout docs
+        uses: actions/checkout@v4
+
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
@@ -27,3 +31,18 @@ jobs:
             mkdocs-material-
       - run: pip install mkdocs-material 
       - run: mkdocs gh-deploy --force
+
+      - name: Install Pandoc
+        run: sudo apt-get install -y pandoc
+
+      - name: Install PDFtk
+        run: sudo apt-get install -y pdftk
+
+      - name: Convert Markdown to PDF and Merge
+        run: |
+          mkdir -p output/pdfs  # Create output directory
+          for file in docs/*.md; do
+            filename=$(basename -- "$file" .md)
+            pandoc "$file" -o "output/pdfs/$filename.pdf"
+          done
+          pdftk output/pdfs/*.pdf cat output output/pdfs/combined.pdf
