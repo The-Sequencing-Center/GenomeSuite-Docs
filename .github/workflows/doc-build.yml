@@ -23,8 +23,6 @@ jobs:
 
       - name: Install Python requirements
         run: |
-          eval `ssh-agent -s`
-          ssh-add - <<< '${{ secrets.MKDOCS_MATERIALS_SSH_KEY }}'
           pip install -r docs/requirements.txt
       
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
