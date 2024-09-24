@@ -41,11 +41,25 @@ jobs:
       - name: Install PDFtk
         run: sudo apt-get install -y pdftk
 
+      - name: Generate Dynamic Cover Page
+        run: |
+          mkdir -p output
+          echo "# Genome Suite Analyzer User Guide for AWS" > output/cover-page.md
+          echo "## The Sequencing Center"
+          echo "## Date: $(date '+%Y-%m-%d')" >> output/cover-page.md
+          echo "### Repository: ${{ github.repository }}" >> output/cover-page.md
+          echo "**Website:** [wwww.thesequencingcenter.com](http://www.thesequencingcenter.com)" >> output/cover-page.md
+          echo "**Support:** [info@thesequencingcenter.com](info@thesequencingcenter.com)" >> output/cover-page.md
+          echo "**Phone:** +1 877-425-2235" >> output/cover-page.md
+          echo "" >> output/cover-page.md
+
+
       - name: Combine and Order Markdown Files into One PDF
         run: |
           mkdir -p output
           ls -R  # Debugging: list all files to ensure correct paths
-          pandoc docs/analyzer-getting-started.md \
+          pandoc output/cover-page.md \
+                 docs/analyzer-getting-started.md \
                  docs/analyzer-launch.md \
                  docs/analyzer-config-connect.md \
                  docs/analyzer-run-terminate.md \
