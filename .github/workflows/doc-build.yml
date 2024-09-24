@@ -44,7 +44,13 @@ jobs:
       - name: Combine and Order Markdown Files into One PDF
         run: |
           mkdir -p output
-          pandoc analyzer-getting-started.md analyzer-launch.md analyzer-config-connect.md analyzer-run-terminate.md analyzer-retrieve-vcf.md -o output/GenomeSuiteDocs.pdf --toc
+          ls -R  # Debugging: list all files to ensure correct paths
+          pandoc docs/analyzer-getting-started.md \
+                 docs/analyzer-launch.md \
+                 docs/analyzer-config-connect.md \
+                 docs/analyzer-run-terminate.md \
+                 docs/analyzer-retrieve-vcf.md \
+                 -o output/GenomeSuiteDocs.pdf --toc
 
       - name: Upload Combined PDF as Artifact
         uses: actions/upload-artifact@v3
