@@ -41,7 +41,7 @@ jobs:
       - name: Install PDFtk
         run: sudo apt-get install -y pdftk
 
-            - name: Generate Dynamic Cover Page
+      - name: Generate Dynamic Cover Page
         run: |
           mkdir -p output
           echo "# Genome Suite Analyzer User Guide for AWS" > output/cover-page.md
