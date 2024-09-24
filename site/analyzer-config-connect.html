@@ -977,7 +977,7 @@
 </li>
 <li>
 <p>Homebrew is a package manager for macOS that simplifies the installation of software. If you don't have Homebrew installed, run the following command in Terminal:</p>
-<p><div class="highlight"><pre><span></span><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+<p><div class="highlight"><pre><span></span><code>/bin/bash -c **$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)**
 </code></pre></div>
    * Follow the on-screen instructions to complete the installation.</p>
 </li>
@@ -1022,11 +1022,11 @@
 <ol>
 <li>Sign in to the AWS Management Console and navigate to the IAM (Identity and Access Management) Console.</li>
 <li>Create a New IAM User:</li>
-<li>In the IAM Dashboard, click on "Users" in the left-hand menu.</li>
-<li>Click "Add user".</li>
-<li>Provide a username and check the "Programmatic access" checkbox to generate an access key.</li>
-<li>Click "Next: Permissions" to assign appropriate permissions, either directly or by attaching a policy (e.g., AmazonS3FullAccess if you need S3 access).</li>
-<li>Follow the remaining prompts and then click "Create user".</li>
+<li>In the IAM Dashboard, click on <strong>Users</strong> in the left-hand menu.</li>
+<li>Click <strong>Add user</strong>.</li>
+<li>Provide a username and check the <strong>Programmatic access</strong> checkbox to generate an access key.</li>
+<li>Click <strong>Next: Permissions</strong> to assign appropriate permissions, either directly or by attaching a policy (e.g., AmazonS3FullAccess if you need S3 access).</li>
+<li>Follow the remaining prompts and then click <strong>Create user</strong>.</li>
 <li>Download or View the Access Key:</li>
 <li>After creating the user, you'll see a page with the Access Key ID and Secret Access Key. You can download these credentials as a .csv file or view them directly on the page.</li>
 <li>Important: This is the only time you'll be able to view the Secret Access Key, so make sure to store it securely.</li>
@@ -1035,12 +1035,12 @@
 <ol>
 <li>Sign in to the AWS Management Console and navigate to the IAM Console.</li>
 <li>Access Your Existing IAM User:</li>
-<li>In the IAM Dashboard, click on "Users" in the left-hand menu.</li>
+<li>In the IAM Dashboard, click on <strong>Users</strong> in the left-hand menu.</li>
 <li>Click on your username to access the details.</li>
 <li>Create a New Access Key (if none exists or if you need a new one):</li>
-<li>Go to the "Security credentials" tab.</li>
-<li>Scroll down to the "Access keys" section.</li>
-<li>Click on "Create access key". AWS will generate a new Access Key ID and Secret Access Key for you.</li>
+<li>Go to the <strong>Security credentials</strong> tab.</li>
+<li>Scroll down to the <strong>Access keys</strong> section.</li>
+<li>Click on <strong>Create access key</strong>. AWS will generate a new Access Key ID and Secret Access Key for you.</li>
 <li>Download or View the Access Key:</li>
 <li>
 <p>As with new users, you'll have the option to download the key or view it once. Ensure it is stored securely.</p>
@@ -1109,11 +1109,11 @@
 <ol>
 <li>Sign in to the AWS Management Console and navigate to the IAM (Identity and Access Management) Console.</li>
 <li>Create a New IAM User:</li>
-<li>In the IAM Dashboard, click on "Users" in the left-hand menu.</li>
-<li>Click "Add user".</li>
-<li>Provide a username and check the "Programmatic access" checkbox to generate an access key.</li>
-<li>Click "Next: Permissions" to assign appropriate permissions, either directly or by attaching a policy (e.g., AmazonS3FullAccess if you need S3 access).</li>
-<li>Follow the remaining prompts and then click "Create user".</li>
+<li>In the IAM Dashboard, click on <strong>Users</strong> in the left-hand menu.</li>
+<li>Click <strong>Add user</strong>.</li>
+<li>Provide a username and check the <strong>Programmatic access</strong> checkbox to generate an access key.</li>
+<li>Click <strong>Next: Permissions</strong> to assign appropriate permissions, either directly or by attaching a policy (e.g., AmazonS3FullAccess if you need S3 access).</li>
+<li>Follow the remaining prompts and then click <strong>Create user</strong>.</li>
 <li>Download or View the Access Key:</li>
 <li>After creating the user, you'll see a page with the Access Key ID and Secret Access Key. You can download these credentials as a .csv file or view them directly on the page.</li>
 <li>Important: This is the only time you'll be able to view the Secret Access Key, so make sure to store it securely.</li>
@@ -1122,12 +1122,12 @@
 <ol>
 <li>Sign in to the AWS Management Console and navigate to the IAM Console.</li>
 <li>Access Your Existing IAM User:</li>
-<li>In the IAM Dashboard, click on "Users" in the left-hand menu.</li>
+<li>In the IAM Dashboard, click on <strong>Users</strong> in the left-hand menu.</li>
 <li>Click on your username to access the details.</li>
 <li>Create a New Access Key (if none exists or if you need a new one):</li>
-<li>Go to the "Security credentials" tab.</li>
-<li>Scroll down to the "Access keys" section.</li>
-<li>Click on "Create access key". AWS will generate a new Access Key ID and Secret Access Key for you.</li>
+<li>Go to the <strong>Security credentials</strong> tab.</li>
+<li>Scroll down to the <strong>Access keys</strong> section.</li>
+<li>Click on <strong>Create access key</strong>. AWS will generate a new Access Key ID and Secret Access Key for you.</li>
 <li>Download or View the Access Key:</li>
 <li>
 <p>As with new users, you'll have the option to download the key or view it once. Ensure it is stored securely.</p>
@@ -1178,7 +1178,7 @@
      <div class="highlight"><pre><span></span><code>ssh -i /path/to/your-keypair.pem ubuntu@your-instance-public-dns
 </code></pre></div></li>
 <li>
-<p>Replace <code>/path/to/your-keypair.pem</code> with the path to your .pem file and <code>your-instance-public-dns</code> with the Public DNS address of your EC2 instance. You can find the Public DNS in the AWS Management Console under the "Instances" section.</p>
+<p>Replace <code>/path/to/your-keypair.pem</code> with the path to your .pem file and <code>your-instance-public-dns</code> with the Public DNS address of your EC2 instance. You can find the Public DNS in the AWS Management Console under the <strong>Instances</strong> section.</p>
 </li>
 <li>
 <p><strong>Access Your EC2 Instance:</strong></p>
@@ -1221,11 +1221,11 @@
 <ol>
 <li>Sign in to the AWS Management Console and navigate to the IAM (Identity and Access Management) Console.</li>
 <li>Create a New IAM User:</li>
-<li>In the IAM Dashboard, click on "Users" in the left-hand menu.</li>
-<li>Click "Add user".</li>
-<li>Provide a username and check the "Programmatic access" checkbox to generate an access key.</li>
-<li>Click "Next: Permissions" to assign appropriate permissions, either directly or by attaching a policy (e.g., AmazonS3FullAccess if you need S3 access).</li>
-<li>Follow the remaining prompts and then click "Create user".</li>
+<li>In the IAM Dashboard, click on <strong>Users</strong> in the left-hand menu.</li>
+<li>Click <strong>Add user</strong>.</li>
+<li>Provide a username and check the <strong>Programmatic access</strong> checkbox to generate an access key.</li>
+<li>Click <strong>Next: Permissions</strong> to assign appropriate permissions, either directly or by attaching a policy (e.g., AmazonS3FullAccess if you need S3 access).</li>
+<li>Follow the remaining prompts and then click <strong>Create user</strong>.</li>
 <li>Download or View the Access Key:</li>
 <li>After creating the user, you'll see a page with the Access Key ID and Secret Access Key. You can download these credentials as a .csv file or view them directly on the page.</li>
 <li>Important: This is the only time you'll be able to view the Secret Access Key, so make sure to store it securely.</li>
@@ -1234,12 +1234,12 @@
 <ol>
 <li>Sign in to the AWS Management Console and navigate to the IAM Console.</li>
 <li>Access Your Existing IAM User:</li>
-<li>In the IAM Dashboard, click on "Users" in the left-hand menu.</li>
+<li>In the IAM Dashboard, click on <strong>Users</strong> in the left-hand menu.</li>
 <li>Click on your username to access the details.</li>
 <li>Create a New Access Key (if none exists or if you need a new one):</li>
-<li>Go to the "Security credentials" tab.</li>
-<li>Scroll down to the "Access keys" section.</li>
-<li>Click on "Create access key". AWS will generate a new Access Key ID and Secret Access Key for you.</li>
+<li>Go to the <strong>Security credentials</strong> tab.</li>
+<li>Scroll down to the <strong>Access keys</strong> section.</li>
+<li>Click on <strong>Create access key</strong>. AWS will generate a new Access Key ID and Secret Access Key for you.</li>
 <li>Download or View the Access Key:</li>
 <li>
 <p>As with new users, you'll have the option to download the key or view it once. Ensure it is stored securely.</p>
