@@ -52,3 +52,6 @@ extra:
 
 nav:
   - Home: README.md
+  - GenomeSuite Analyzer:
+    - Getting Started: getting-started.md
+    - Configuring an AWS Account: configure-aws-account.md
