@@ -58,10 +58,11 @@ jobs:
           name: GenomeSuiteDocs
           path: output/GenomeSuiteDocs.pdf
 
-      - name: Commit PDFs to repo
+      - name: Commit PDFs to the repository
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          git add output/pdfs/
+          git add output/GenomeSuiteDocs.pdf  # Add the PDF file to Git
+          git add site/  # Add other untracked files if necessary (e.g., your site directory)
           git commit -m "Add generated PDFs"
           git push origin main
