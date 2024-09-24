@@ -5,11 +5,12 @@ use_directory_urls: false
 theme:
   name: material
   palette:
-    - scheme: blue
+    - scheme: default
+      primary: blue
       toggle:
         icon: material/lightbulb-outline
         name: Switch to dark mode
-    - scheme: custom-blue-dark
+    - scheme: slate
       toggle:
         icon: material/lightbulb
         name: Switch to light mode
