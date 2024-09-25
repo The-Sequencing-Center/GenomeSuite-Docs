@@ -63,3 +63,5 @@ nav:
     - How to get AWS keys: analyzer-how-to-get-aws-keys.md 
     - Run GenomeSuite Analyzer: analyzer-run.md
     - Download the VCF files: analyzer-download-vcf.md
+    - Reference genome: analyzer-reference-genome.md
+    - License notice: analyzer-license-notice.md
