@@ -2,13 +2,13 @@
 
 GenomeSuite Analyzer runs on the [Amazon Web Services (AWS)](https://aws.amazon.com/) platform. If you do not have an AWS account, start with [Create an AWS Account](#create-an-aws-account). If you do have an AWS account, you can skip to the step [Log into Your AWS Account](#log-into-your-aws-account).
 
-Some steps are identified as a “**one-time step**”.  This means you should only have to perform this step once during initial setup.
+Some steps are identified as a “*one-time step*”.  This means you should only have to perform this step once during initial setup.
 
 GenomeSuite Analyzer can process POD5, FAST5 or BAM files. You will have to choose one filetype for each run.
 
 ## Create an AWS account
 
-This is a **one-time** step.
+This is a *one-time step*.
 
 To create an AWS account:
 
@@ -52,7 +52,7 @@ To log in to your AWS account, follow these steps:
 
 ## Create an S3 bucket
 
-This is a **one-time** step.
+This is a *one-time step*.
 
 You will now create an AWS S3 bucket that will contain all of your Nanopore POD5 sample files. 
 
@@ -107,7 +107,7 @@ To copy or move files, follow these instructions:
 
 ## Create a key pair
 
-This is a one-time step.
+This is a *one-time step*.
 
 To create a key pair in AWS, follow these steps:
 
@@ -147,7 +147,7 @@ To create a key pair in AWS, follow these steps:
 
 ## Create a security group
 
-This is a one-time step.
+This is a *one-time step*.
 
 To create a security group in AWS for EC2 that allows SSH logins on port 22, follow these steps:
 
