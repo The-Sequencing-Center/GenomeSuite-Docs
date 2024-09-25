@@ -62,3 +62,4 @@ nav:
     - Configure AWS credentials: analyzer-configure-aws.md
     - How to get AWS keys: analyzer-how-to-get-aws-keys.md 
     - Run GenomeSuite Analyzer: analyzer-run.md
+    - Download the VCF files: analyzer-download-vcf.md
