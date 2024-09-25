@@ -61,3 +61,4 @@ nav:
     - Connect to the EC2 instance: analyzer-connect.md
     - Configure AWS credentials: analyzer-configure-aws.md
     - How to get AWS keys: analyzer-how-to-get-aws-keys.md 
+    - Run GenomeSuite Analyzer: analyzer-run.md
