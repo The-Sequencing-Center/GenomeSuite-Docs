@@ -1,6 +1,6 @@
 # Getting started
 
-GenomeSuite Analyzer runs on the [Amazon Web Services (AWS)](https://aws.amazon.com/) platform. If you do not have an AWS account, start with [Create an AWS Account](#create-an-aws-account). If you do have an AWS account, you can skip to the step [Log into Your AWS Account](#log-into-your-aws-account).
+GenomeSuite Analyzer runs on the [Amazon Web Services (AWS)](https://aws.amazon.com/) platform. If you do not have an AWS account, start with [Create an AWS account](#create-an-aws-account). If you do have an AWS account, you can skip to the step [Log into your AWS account](#log-into-your-aws-account).
 
 Some steps are identified as a “*one-time step*”.  This means you should only have to perform this step once during initial setup.
 
@@ -9,8 +9,6 @@ GenomeSuite Analyzer can process POD5, FAST5 or BAM files. You will have to choo
 ## Create an AWS account
 
 This is a *one-time step*.
-
-To create an AWS account:
 
 1. Open the [AWS account creation](https://aws.amazon.com/resources/create-account/) page and **Create an AWS Account**.
 
@@ -34,8 +32,6 @@ After your account is activated, you can sign in to the [AWS Management Console]
 
 ## Log into your AWS account
 
-To log in to your AWS account, follow these steps:
-
 1. Open your web browser and go to the [AWS Management Console](https://aws.amazon.com/console/) login page.
 
 1. On the login page, you will see two options:
@@ -56,8 +52,6 @@ This is a *one-time step*.
 
 You will now create an AWS S3 bucket that will contain all of your Nanopore POD5 sample files. 
 
-To create an S3 bucket in your AWS account:
-
 1. From the [AWS Management Console](https://aws.amazon.com/console/), type **S3** into the search bar at the top and select **S3** from the drop-down list. This takes you to the Amazon S3 dashboard.
 
 1. On the S3 dashboard, click the **Create bucket** button.
@@ -69,11 +63,11 @@ To create an S3 bucket in your AWS account:
    - **Region:** Select the region **US East (N. Virginia) us-east-1**. This is the region where the S3 bucket will be created.
 
 1. Set the bucket options.
-   - **Block Public Access Settings:** By default, S3 buckets are set to block all public access. You can leave this option enabled unless you specifically need the bucket to be public.
+   - **Block public access settings:** By default, S3 buckets are set to block all public access. You can leave this option enabled unless you specifically need the bucket to be public.
 
-   - **Bucket Versioning:** To enable versioning, which keeps multiple versions of an object in the same bucket, you may optionally choose to enable this in **Bucket Versioning**.
+   - **Bucket versioning:** To enable versioning, which keeps multiple versions of an object in the same bucket, you may optionally choose to enable this in **Bucket Versioning**.
 
-   - **Tags, Object Lock, and Encryption:** You may also enable additional optional settings such as adding tags, enabling object lock, and set default encryption, but these are not necessary can be configured later.
+   - **Tags, object lock, and encryption:** You may also enable additional optional settings such as adding tags, enabling object lock, and set default encryption, but these are not necessary can be configured later.
 
 1. Review your bucket settings configuration and click **Create bucket**.
 
@@ -88,8 +82,6 @@ Please contact us at [support@thesequencingcenter.com](mailto:support@thesequenc
 ## Store POD5 files in S3 bucket
 
 If you already have an AWS account and an S3 bucket with POD5 files in it, you have two choices. You can use the existing bucket name with GenomeSuite Analyzer or you can copy or move the files from the existing bucket to another bucket within the same AWS account. 
-
-To copy or move files, follow these instructions:
 
 1. In the S3 dashboard, click on the bucket that contains the POD5, FAST5 or BAM files you want to copy or move.
 
@@ -109,8 +101,6 @@ To copy or move files, follow these instructions:
 
 This is a *one-time step*.
 
-To create a key pair in AWS, follow these steps:
-
 1. In the AWS Management Console, type **EC2** in the search bar and select **EC2** from the drop-down menu.
 
 1. In the EC2 Dashboard in the left-hand side menu, click on the **Key Pairs** option under the **Network & Security** section.
@@ -118,12 +108,12 @@ To create a key pair in AWS, follow these steps:
 1. Click the **Create Key Pair** button.
 
 1. Configure the key pair settings:
-   - **Name:** Enter a name for your key pair, such as `GenomeSuite-Analyzer-keypair`. The name must be unique within your AWS region.
-   - **Key Pair Type:** Choose the key pair type, typically **ED25519**.
-   - **Private Key File Format:** Choose the format for the private key file. Options include:
-     - **.pem:** For SSH clients (like OpenSSH) on Linux or macOS.
-     - **.ppk:** For PuTTY, a popular SSH client on Windows.
-   - **Tags:** (Optional) You can add tags to your key pair for easier management.
+    - **Name:** Enter a name for your key pair, such as `GenomeSuite-Analyzer-keypair`. The name must be unique within your AWS region.
+    - **Key pair type:** Choose the key pair type, typically **ED25519**.
+    - **Private key file format:** Choose the format for the private key file. Options include:
+          - **.pem:** For SSH clients (like OpenSSH) on Linux or macOS.
+          - **.ppk:** For PuTTY, a popular SSH client on Windows.
+    - **Tags:** (Optional) You can add tags to your key pair for easier management.
 
 1. Click **Create key pair**. AWS will generate the key pair and automatically download the private key file to your computer.
 
@@ -140,7 +130,8 @@ To create a key pair in AWS, follow these steps:
 
 1. Store the private key in a secure location. Do not share it with anyone or commit it to version control systems like Git.
 
-**Important:**
+**Important notice:**
+
 - **One-time download:** The private key file can only be downloaded once at the time of creation. If you lose the private key, you will need to create a new key pair and update your instances to use the new key.
 
 - **Accessing EC2 instances:** When launching a new EC2 instance, you will be able to select this key pair for SSH access. Ensure the correct permissions are set on your private key file before attempting to connect.
@@ -148,8 +139,6 @@ To create a key pair in AWS, follow these steps:
 ## Create a security group
 
 This is a *one-time step*.
-
-To create a security group in AWS for EC2 that allows SSH logins on port 22, follow these steps:
 
 1. In the AWS Management Console, type **EC2** in the search bar and select **EC2** from the drop-down menu.
 
@@ -170,11 +159,12 @@ To create a security group in AWS for EC2 that allows SSH logins on port 22, fol
 
 1. Attach the security group to an EC2 instance.
 
-   - **During EC2 Instance Launch:** When launching a new EC2 instance, you can select this security group under the **Configure Security Group** section.
+   - **During EC2 instance launch:** When launching a new EC2 instance, you can select this security group under the **Configure Security Group** section.
 
-   - **For Existing Instances:** If you want to assign this security group to an existing instance, go to the **Instances** section, select your instance, click **Actions** > **Networking** > **Change Security Groups**, and then select the **analyzer-sg** security group.
+   - **For existing instances:** If you want to assign this security group to an existing instance, go to the **Instances** section, select your instance, click **Actions** > **Networking** > **Change Security Groups**, and then select the **analyzer-sg** security group.
 
-**Important**
-- **Security Considerations:** Allowing SSH access from any IP address (0.0.0.0/0) is convenient, but can expose your instance to potential attacks. It is recommended to restrict access to specific IP addresses whenever possible.
+**Important notice:**
 
-- **Firewall Settings:** Ensure that any local firewalls on your machine or network allow outbound connections on port 22.
+- **Security considerations:** Allowing SSH access from any IP address (0.0.0.0/0) is convenient, but can expose your instance to potential attacks. It is recommended to restrict access to specific IP addresses whenever possible.
+
+- **Firewall settings:** Ensure that any local firewalls on your machine or network allow outbound connections on port 22.
