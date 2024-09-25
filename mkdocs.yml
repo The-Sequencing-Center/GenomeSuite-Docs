@@ -58,3 +58,4 @@ nav:
     - Getting started: analyzer-getting-started.md
     - Launch GenomeSuite Analyzer on EC2: analyzer-launch.md
     - Configure the EC2 instance: analyzer-configure-ec2.md
+    - Configure AWS credentials: analyzer-configure-aws.md
