@@ -57,6 +57,4 @@ nav:
   - GenomeSuite Analyzer:
     - Getting started: analyzer-getting-started.md
     - Launch GenomeSuite Analyzer on EC2: analyzer-launch.md
-    - Configuring and connecting to the EC2 Instance: analyzer-config-connect.md
-    - Running GenomeSuite Analyzer: analyzer-run-terminate.md
-    - Retrieving the VCF files: analyzer-retrieve-vcf.md
+    - Configure the EC2 instance: analyzer-configure-ec2.md
