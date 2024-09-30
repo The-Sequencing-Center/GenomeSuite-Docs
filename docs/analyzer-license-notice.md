@@ -4,8 +4,6 @@ THE SEQUENCING CENTER SUITE (INCLUDING, WITHOUT LIMITATION, THE GENOMESUITE ANAL
 
 Information furnished is believed to be accurate and reliable. However, The Sequencing Center Inc. assumes no responsibility for the consequences of use of such information or for any infringement of patents or other rights of third parties that may result from its use. No license is granted by implication or otherwise under any patent or patent rights of The Sequencing Center Inc. Specifications mentioned in this publication are subject to change without notice. This publication supersedes and replaces all information previously supplied.
 
-**Date:** September 18, 2024
-
 **Document ID:** TSC-001-08132024-v.1.3.0
 
 **Product ID:** GenomeSuite-Analyzer-TSC-001-08092024-v-1-3-0
