@@ -56,7 +56,12 @@ nav:
   - Home: README.md
   - GenomeSuite Analyzer:
     - Getting started: analyzer-getting-started.md
-    - Launching GenomeSuite Analyzer on EC2: analyzer-launch.md
-    - Configuring and connecting to the EC2 Instance: analyzer-config-connect.md
-    - Running GenomeSuite Analyzer: analyzer-run-terminate.md
-    - Retrieving the VCF files: analyzer-retrieve-vcf.md
+    - Launch GenomeSuite Analyzer on EC2: analyzer-launch.md
+    - Configure the EC2 instance: analyzer-configure-ec2.md
+    - Connect to the EC2 instance: analyzer-connect.md
+    - Configure AWS credentials: analyzer-configure-aws.md
+    - How to get AWS keys: analyzer-how-to-get-aws-keys.md 
+    - Run GenomeSuite Analyzer: analyzer-run.md
+    - Download the VCF files: analyzer-download-vcf.md
+    - Reference genome: analyzer-reference-genome.md
+    - License notice: analyzer-license-notice.md
