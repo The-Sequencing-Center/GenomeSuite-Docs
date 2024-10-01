@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://the-sequencing-center.github.io/genomesuite-docs/analyzer-run-terminate.html">
+        <link rel="canonical" href="https://the-sequencing-center.github.io/genomesuite-docs/analyzer-run.html">
       
       
-        <link rel="prev" href="analyzer-config-connect.html">
+        <link rel="prev" href="analyzer-how-to-get-aws-keys.html">
       
       
-        <link rel="next" href="analyzer-retrieve-vcf.html">
+        <link rel="next" href="analyzer-download-vcf.html">
       
       
       <link rel="icon" href="assets/tsc-logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>Running GenomeSuite Analyzer - GenomeSuite Documentation</title>
+        <title>Run GenomeSuite Analyzer - GenomeSuite Documentation</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#running-and-terminating-genomesuite-analyzer" class="md-skip">
+        <a href="#run-genomesuite-analyzer" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Running GenomeSuite Analyzer
+              Run GenomeSuite Analyzer
             
           </span>
         </div>
@@ -261,6 +261,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -321,7 +331,7 @@
         
   
   <span class="md-ellipsis">
-    Launching GenomeSuite Analyzer on EC2
+    Launch GenomeSuite Analyzer on EC2
   </span>
   
 
@@ -338,11 +348,74 @@
   
   
     <li class="md-nav__item">
-      <a href="analyzer-config-connect.html" class="md-nav__link">
+      <a href="analyzer-configure-ec2.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Configuring and connecting to the EC2 Instance
+    Configure the EC2 instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-connect.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connect to the EC2 instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-configure-aws.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure AWS credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-how-to-get-aws-keys.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to get AWS keys
   </span>
   
 
@@ -372,18 +445,18 @@
           
   
   <span class="md-ellipsis">
-    Running GenomeSuite Analyzer
+    Run GenomeSuite Analyzer
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="analyzer-run-terminate.html" class="md-nav__link md-nav__link--active">
+      <a href="analyzer-run.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Running GenomeSuite Analyzer
+    Run GenomeSuite Analyzer
   </span>
   
 
@@ -405,27 +478,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#navigate-to-the-genomesuite-analyzer-directory" class="md-nav__link">
+  <a href="#example-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Navigate to the GenomeSuite Analyzer Directory
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-genomesuite-analyzer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run GenomeSuite Analyzer
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#monitor-genomesuite-analyzer-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monitor GenomeSuite Analyzer Output
+      Example commands
     </span>
   </a>
   
@@ -438,80 +493,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Create a New AMI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-access-the-ec2-console" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Access the EC2 Console
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-create-an-ami-from-the-running-instance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Create an AMI from the Running Instance
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-monitor-the-ami-creation-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Monitor the AMI Creation Process
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#terminate-genomesuite-analyzer-ec2-instance" class="md-nav__link">
+  <a href="#terminate-the-ec2-instance" class="md-nav__link">
     <span class="md-ellipsis">
-      Terminate GenomeSuite Analyzer EC2 Instance
+      Terminate the EC2 instance
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Terminate GenomeSuite Analyzer EC2 Instance">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-access-the-ec2-dashboard" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Access the EC2 Dashboard
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-select-the-instance-to-terminate" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Select the Instance to Terminate
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-terminate-the-instance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Terminate the Instance
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -531,11 +520,53 @@
   
   
     <li class="md-nav__item">
-      <a href="analyzer-retrieve-vcf.html" class="md-nav__link">
+      <a href="analyzer-download-vcf.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Retrieving the VCF files
+    Download the VCF files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-reference-genome.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference genome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-license-notice.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License notice
   </span>
   
 
@@ -579,27 +610,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#navigate-to-the-genomesuite-analyzer-directory" class="md-nav__link">
+  <a href="#example-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Navigate to the GenomeSuite Analyzer Directory
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-genomesuite-analyzer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run GenomeSuite Analyzer
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#monitor-genomesuite-analyzer-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monitor GenomeSuite Analyzer Output
+      Example commands
     </span>
   </a>
   
@@ -612,80 +625,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Create a New AMI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-access-the-ec2-console" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Access the EC2 Console
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-create-an-ami-from-the-running-instance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Create an AMI from the Running Instance
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-monitor-the-ami-creation-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Monitor the AMI Creation Process
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#terminate-genomesuite-analyzer-ec2-instance" class="md-nav__link">
+  <a href="#terminate-the-ec2-instance" class="md-nav__link">
     <span class="md-ellipsis">
-      Terminate GenomeSuite Analyzer EC2 Instance
+      Terminate the EC2 instance
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Terminate GenomeSuite Analyzer EC2 Instance">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-access-the-ec2-dashboard" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Access the EC2 Dashboard
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-select-the-instance-to-terminate" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Select the Instance to Terminate
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-terminate-the-instance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Terminate the Instance
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -704,128 +651,114 @@
                   
 
 
-<h1 id="running-and-terminating-genomesuite-analyzer">Running and Terminating GenomeSuite Analyzer<a class="headerlink" href="#running-and-terminating-genomesuite-analyzer" title="Permanent link">&para;</a></h1>
+<h1 id="run-genomesuite-analyzer">Run GenomeSuite Analyzer<a class="headerlink" href="#run-genomesuite-analyzer" title="Permanent link">&para;</a></h1>
 <p>To run GenomeSuite Analyzer on the EC2 instance, follow these steps:</p>
-<h2 id="navigate-to-the-genomesuite-analyzer-directory">Navigate to the GenomeSuite Analyzer Directory<a class="headerlink" href="#navigate-to-the-genomesuite-analyzer-directory" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Change to the Home Directory:</strong></li>
-<li>Once logged in, you should already be in the <code>/home/ubuntu</code> directory. To confirm, run:
-     <div class="highlight"><pre><span></span><code>cd /home/ubuntu
-</code></pre></div></li>
 <li>
-<p>If you're already there, this command won't change anything.</p>
+<p>When you are logged into your EC2 instance with your AWS credentials, you should already be in the <code>/home/ubuntu</code> directory. Confirm this by running the following command:</p>
+<p><div class="highlight"><pre><span></span><code>cd /home/ubuntu
+</code></pre></div>
+   If you are already there, this command won't change anything.</p>
 </li>
 <li>
-<p><strong>Navigate to the GenomeSuite Analyzer Distribution Directory:</strong></p>
+<p>Change into the GenomeSuite Analyzer distribution directory by running the following command:</p>
+<div class="highlight"><pre><span></span><code>cd analyzer/dist
+</code></pre></div>
 </li>
-<li>Run the following command to change into the GenomeSuite Analyzer distribution directory:
-     <div class="highlight"><pre><span></span><code>cd Sniffles/dist
-</code></pre></div></li>
-</ol>
-<h2 id="run-genomesuite-analyzer">Run GenomeSuite Analyzer<a class="headerlink" href="#run-genomesuite-analyzer" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Run GenomeSuite Analyzer with the Required Parameters:</strong></li>
-<li>Execute GenomeSuite Analyzer by running the following command:
-     <div class="highlight"><pre><span></span><code>./sniffles -b bucketname -s samplename
-</code></pre></div></li>
-<li>Replace <code>bucketname</code> with the name of the S3 bucket where your POD5 files are stored.</li>
-<li>Replace <code>samplename</code> with an arbitrary name of your choice for the sample being processed.</li>
-</ol>
-<p><strong>Example Command:</strong>
-If your S3 bucket is named <code>sniffles-sample</code> and your sample name is <code>sample1</code>, the command would look like this:
-<div class="highlight"><pre><span></span><code>./sniffles -b sniffles-sample -s sample1
-</code></pre></div></p>
-<h2 id="monitor-genomesuite-analyzer-output">Monitor GenomeSuite Analyzer Output<a class="headerlink" href="#monitor-genomesuite-analyzer-output" title="Permanent link">&para;</a></h2>
+<li>
+<p>Start GenomeSuite Analyzer by running the following command:</p>
+<div class="highlight"><pre><span></span><code>./analyzer -b bucketname -s samplename -f filetype -m modelname
+</code></pre></div>
 <ul>
-<li>GenomeSuite Analyzer will start processing the data. You should see output in the terminal indicating the progress of the operation. Depending on the size of the dataset, this may take some time.</li>
+<li>Replace <code>bucketname</code> with the name of the S3 bucket where your POD5, FAST5 or BAM files are stored.</li>
+<li>Replace <code>samplename</code> with an arbitrary name of your choice for the sample being processed.</li>
+<li>Replace <code>filetype</code> with <code>pod5</code>, <code>fast5</code> or <code>bam</code>. This parameter specifies the file format of the sample files. All sample files must be the same filet</li>
+<li>Replace <code>modelname</code> with a dorado basecaller model name.</li>
 </ul>
+<p>GenomeSuite Analyzer will start processing the data. You should see output in the terminal indicating the progress of the operation. Depending on the size of the dataset, this may take some time.</p>
+</li>
+</ol>
+<h2 id="example-commands">Example commands<a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h2>
+<p>Use the following command to show help:</p>
+<div class="highlight"><pre><span></span><code>./analyzer --help
+</code></pre></div>
+<p>If your S3 bucket is named GenomeSuite-Analyzer-sample, and you are using POD5 files, the command would look like this:</p>
+<div class="highlight"><pre><span></span><code>./analyzer -b GenomeSuite-Analyzer-sample -s sample1 -f pod5
+</code></pre></div>
+<p>If your S3 bucket is named GenomeSuite-Analyzer-sample, and you are using FAST55 files, the command would look like this:</p>
+<div class="highlight"><pre><span></span><code>./analyzer -b GenomeSuite-Analyzer-sample -s sample1 -f fast5
+</code></pre></div>
+<p>If your S3 bucket is named GenomeSuite-Analyzer-sample, and you are processing a BAM file, the command would look like this:</p>
+<div class="highlight"><pre><span></span><code>./analyzer -b GenomeSuite-Analyzer-sample -s sample1 -f bam
+</code></pre></div>
+<p>If you want to see a list of available Nanopore Dorado basecalling models:</p>
+<div class="highlight"><pre><span></span><code>./analyzer -m
+</code></pre></div>
 <h2 id="create-a-new-ami">Create a New AMI<a class="headerlink" href="#create-a-new-ami" title="Permanent link">&para;</a></h2>
-<p>This is a <strong>one-time</strong> step.</p>
-<p>When the GenomeSuite Analyzer job is done, and before terminating the running EC2 instance, it is VERY IMPORTANT that you create a new AMI. By creating a new AMI you will save all your configuration settings from above. You can then use this new AMI for all future runs. </p>
+<p>This is a <em>one-time step</em>.</p>
+<p>When the GenomeSuite Analyzer job is done, and before terminating the running EC2 instance, it is <strong>VERY IMPORTANT</strong> that you create a new AMI. By creating a new AMI you will save all your configuration settings from above. You can then use this new AMI for all future runs. </p>
 <p>To create a new AMI from a running EC2 instance using the EC2 console, follow these steps:</p>
-<h3 id="step-1-access-the-ec2-console">Step 1: Access the EC2 Console<a class="headerlink" href="#step-1-access-the-ec2-console" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Navigate to the EC2 Dashboard:</strong></li>
 <li>
 <p>In the AWS Management Console, type <strong>EC2</strong> in the search bar and select <strong>EC2</strong> from the drop-down menu.</p>
 </li>
 <li>
-<p><strong>Access the Instances Section:</strong></p>
-</li>
-<li>In the EC2 Dashboard, click on <strong>Instances</strong> in the left-hand menu under the <strong>Instances</strong> section. This will display a list of all running EC2 instances.</li>
-</ol>
-<h3 id="step-2-create-an-ami-from-the-running-instance">Step 2: Create an AMI from the Running Instance<a class="headerlink" href="#step-2-create-an-ami-from-the-running-instance" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Select the Instance:</strong></li>
-<li>
-<p>Locate the running instance from which you want to create an AMI. Click the checkbox next to the instance to select it.</p>
+<p>In the EC2 Dashboard, click on <strong>Instances</strong> in the left-hand menu under the <strong>Instances</strong> section. This displays a list of all running EC2 instances.</p>
 </li>
 <li>
-<p><strong>Open the Instance Actions Menu:</strong></p>
+<p>Find the running instance from which you want to create an AMI. </p>
+</li>
+<li>
+<p>Click the checkbox next to the instance to select it.</p>
 </li>
 <li>
 <p>With the instance selected, click on the <strong>Actions</strong> drop-down menu at the top right of the page.</p>
 </li>
 <li>
-<p><strong>Select Create Image:</strong></p>
+<p>From the <strong>Actions</strong> drop-down menu, navigate to <strong>Image and templates</strong> and then select <strong>Create image</strong>. This opens the <strong>Create Image</strong> dialog box.</p>
 </li>
 <li>
-<p>From the <strong>Actions</strong> drop-down menu, navigate to <strong>Image and templates</strong> and then select <strong>Create image</strong>. This will open the Create Image dialog box.</p>
+<p>Configure the image settings.</p>
+<ul>
+<li><strong>Image Name:</strong> Enter a name for your AMI in the <strong>Image name</strong> field.</li>
+<li><strong>Image Description (optional):</strong> You can provide a description of the AMI for future reference.</li>
+</ul>
 </li>
 <li>
-<p><strong>Configure the Image Settings:</strong></p>
-</li>
-<li>Image Name: Enter a name for your AMI in the <strong>Image name</strong> field.</li>
-<li>
-<p>Image Description (optional): You can provide a description of the AMI for future reference.</p>
+<p>Once you have configured all the settings, click on the <strong>Create image</strong> button at the bottom of the dialog box. AWS will start creating the AMI. </p>
 </li>
 <li>
-<p><strong>Create the Image:</strong></p>
+<p>To monitor its progress, click on <strong>AMIs</strong> in the left-hand menu under the <strong>Images</strong> section.</p>
+<ul>
+<li>You will see your new AMI listed with a status of <strong>Pending</strong>. Once the status changes to <strong>Available</strong>, the AMI is ready to use.</li>
+</ul>
 </li>
-<li>Once you have configured all the settings, click on the <strong>Create image</strong> button at the bottom of the dialog box.</li>
 </ol>
-<h3 id="step-3-monitor-the-ami-creation-process">Step 3: Monitor the AMI Creation Process<a class="headerlink" href="#step-3-monitor-the-ami-creation-process" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>View the Image Creation Progress:</strong></li>
-<li>AWS will start creating the AMI. To monitor its progress, click on <strong>AMIs</strong> in the left-hand menu under the <strong>Images</strong> section.</li>
-<li>You will see your new AMI listed with a status of <strong>pending</strong>. Once the status changes to <strong>available</strong>, the AMI is ready to use.</li>
-</ol>
-<h2 id="terminate-genomesuite-analyzer-ec2-instance">Terminate GenomeSuite Analyzer EC2 Instance<a class="headerlink" href="#terminate-genomesuite-analyzer-ec2-instance" title="Permanent link">&para;</a></h2>
-<p>When the GenomeSuite Analyzer job is finished, it's very important that you terminate the running GenomeSuite Analyzer EC2 instance. You do not want to accumulate unnecessary charges by letting the instance continue running.</p>
+<h2 id="terminate-the-ec2-instance">Terminate the EC2 instance<a class="headerlink" href="#terminate-the-ec2-instance" title="Permanent link">&para;</a></h2>
+<p>When the GenomeSuite Analyzer job is finished, it is very important that you terminate the running GenomeSuite Analyzer EC2 instance. You do not want to accumulate unnecessary charges by letting the instance continue running.</p>
 <p>To terminate an EC2 instance, follow these steps:</p>
-<h3 id="step-1-access-the-ec2-dashboard">Step 1: Access the EC2 Dashboard<a class="headerlink" href="#step-1-access-the-ec2-dashboard" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Navigate to the Instances Section:</strong></li>
-<li>On the EC2 Dashboard, in the left-hand menu, click on <strong>Instances</strong> under the <strong>Instances</strong> section.</li>
-</ol>
-<h3 id="step-2-select-the-instance-to-terminate">Step 2: Select the Instance to Terminate<a class="headerlink" href="#step-2-select-the-instance-to-terminate" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Find the Instance:</strong></li>
 <li>
-<p>Locate the instance you want to terminate. You can use the search bar at the top to filter instances by name, instance ID, or other attributes.</p>
+<p>On the EC2 Dashboard, in the left-hand menu, click on <strong>Instances</strong> under the <strong>Instances</strong> section.</p>
 </li>
 <li>
-<p><strong>Select the Instance:</strong></p>
-</li>
-<li>Click the checkbox next to the instance you want to terminate to select it.</li>
-</ol>
-<h3 id="step-3-terminate-the-instance">Step 3: Terminate the Instance<a class="headerlink" href="#step-3-terminate-the-instance" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Terminate the Instance:</strong></li>
-<li>With the instance selected, click on the <strong>Instance state</strong> button at the top of the page.</li>
-<li>
-<p>From the dropdown menu, select <strong>Terminate instance</strong>.</p>
+<p>Find the instance you want to terminate. You can use the search bar at the top to filter instances by name, instance ID, or other attributes.</p>
 </li>
 <li>
-<p><strong>Confirm the Termination:</strong></p>
+<p>Click the checkbox next to the instance you want to terminate to select it.</p>
 </li>
 <li>
-<p>A confirmation dialog will appear asking if you're sure you want to terminate the instance. Confirm by clicking <strong>Terminate</strong>.</p>
+<p>With the instance selected, click on the <strong>Instance state</strong> button at the top of the page.</p>
 </li>
 <li>
-<p><strong>Monitor Termination Process:</strong></p>
+<p>From the dropdown menu, select <strong>Terminate instance</strong>. A confirmation dialog will appear asking if you are sure you want to terminate the instance. </p>
 </li>
+<li>
+<p>Click <strong>Terminate</strong> to confirm.</p>
+<ul>
 <li>The instance will begin shutting down and its state will change to <strong>shutting-down</strong> and then to <strong>terminated</strong>. Once terminated, the instance will no longer incur charges.</li>
+</ul>
+</li>
 </ol>
 
 
@@ -888,7 +821,7 @@ If your S3 bucket is named <code>sniffles-sample</code> and your sample name is 
     <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.tooltips", "content.tabs.link", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "toc.follow"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      <script src="assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>

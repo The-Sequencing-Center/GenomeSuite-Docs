@@ -8,19 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://the-sequencing-center.github.io/genomesuite-docs/analyzer-retrieve-vcf.html">
+        <link rel="canonical" href="https://the-sequencing-center.github.io/genomesuite-docs/analyzer-reference-genome.html">
       
       
-        <link rel="prev" href="analyzer-run-terminate.html">
+        <link rel="prev" href="analyzer-download-vcf.html">
       
+      
+        <link rel="next" href="analyzer-license-notice.html">
       
       
       <link rel="icon" href="assets/tsc-logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>Retrieving the VCF files - GenomeSuite Documentation</title>
+        <title>Reference genome - GenomeSuite Documentation</title>
       
     
     
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#retrieving-the-vcf-file" class="md-skip">
+        <a href="#reference-genome" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Retrieving the VCF files
+              Reference genome
             
           </span>
         </div>
@@ -259,6 +261,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -319,7 +331,7 @@
         
   
   <span class="md-ellipsis">
-    Launching GenomeSuite Analyzer on EC2
+    Launch GenomeSuite Analyzer on EC2
   </span>
   
 
@@ -336,11 +348,11 @@
   
   
     <li class="md-nav__item">
-      <a href="analyzer-config-connect.html" class="md-nav__link">
+      <a href="analyzer-configure-ec2.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Configuring and connecting to the EC2 Instance
+    Configure the EC2 instance
   </span>
   
 
@@ -357,11 +369,95 @@
   
   
     <li class="md-nav__item">
-      <a href="analyzer-run-terminate.html" class="md-nav__link">
+      <a href="analyzer-connect.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Running GenomeSuite Analyzer
+    Connect to the EC2 instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-configure-aws.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure AWS credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-how-to-get-aws-keys.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to get AWS keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-run.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run GenomeSuite Analyzer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-download-vcf.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download the VCF files
   </span>
   
 
@@ -387,82 +483,37 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Retrieving the VCF files
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="analyzer-retrieve-vcf.html" class="md-nav__link md-nav__link--active">
+      <a href="analyzer-reference-genome.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Retrieving the VCF files
+    Reference genome
   </span>
   
 
       </a>
       
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
   
   
   
-    
   
+    <li class="md-nav__item">
+      <a href="analyzer-license-notice.html" class="md-nav__link">
+        
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-sign-in-to-the-aws-management-console" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Sign in to the AWS Management Console
-    </span>
-  </a>
+  <span class="md-ellipsis">
+    License notice
+  </span>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-access-the-s3-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Access the S3 Service
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-locate-the-vcf-file-in-the-s3-bucket" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Locate the VCF File in the S3 Bucket
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-download-the-vcf-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 4: Download the VCF File
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+
+      </a>
     </li>
   
 
@@ -495,50 +546,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-sign-in-to-the-aws-management-console" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Sign in to the AWS Management Console
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-access-the-s3-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Access the S3 Service
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-locate-the-vcf-file-in-the-s3-bucket" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Locate the VCF File in the S3 Bucket
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-download-the-vcf-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 4: Download the VCF File
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -552,41 +559,13 @@
                   
 
 
-<h1 id="retrieving-the-vcf-file">Retrieving the VCF File<a class="headerlink" href="#retrieving-the-vcf-file" title="Permanent link">&para;</a></h1>
-<p>GenomeSuite Analyzer will generate a <strong>VCF</strong> file and store it in your S3 bucket. To download the VCF file from the S3 bucket, follow these steps:</p>
-<h2 id="step-1-sign-in-to-the-aws-management-console">Step 1: Sign in to the AWS Management Console<a class="headerlink" href="#step-1-sign-in-to-the-aws-management-console" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Navigate to the AWS Console:</strong></li>
-<li>Open your web browser and go to the AWS Management Console.</li>
-<li>Sign in with your AWS account credentials.</li>
-</ol>
-<h2 id="step-2-access-the-s3-service">Step 2: Access the S3 Service<a class="headerlink" href="#step-2-access-the-s3-service" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Open the S3 Dashboard:</strong></li>
-<li>In the AWS Management Console, type <strong>S3</strong> into the search bar and select <strong>S3</strong> from the dropdown list to navigate to the S3 service.</li>
-</ol>
-<h2 id="step-3-locate-the-vcf-file-in-the-s3-bucket">Step 3: Locate the VCF File in the S3 Bucket<a class="headerlink" href="#step-3-locate-the-vcf-file-in-the-s3-bucket" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Find the Bucket:</strong></li>
-<li>
-<p>In the S3 Dashboard, find and click on the bucket name where the VCF file is stored (e.g., <code>sniffles-sample</code>).</p>
-</li>
-<li>
-<p><strong>Locate the VCF File:</strong></p>
-</li>
-<li>Search for the VCF file using the naming convention <code>sample_name.vcf.gz</code>, where <code>sample_name</code> is the name you provided in the <code>-s</code> parameter when running GenomeSuite Analyzer. For example, if the sample name was <code>sample1</code>, look for the file named <code>sample1.vcf.gz</code>.</li>
-</ol>
-<h2 id="step-4-download-the-vcf-file">Step 4: Download the VCF File<a class="headerlink" href="#step-4-download-the-vcf-file" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Select the File:</strong></li>
-<li>
-<p>Once you locate the <code>sample_name.vcf.gz</code> file, click on the checkbox next to the file name to select it.</p>
-</li>
-<li>
-<p><strong>Download the File:</strong></p>
-</li>
-<li>With the file selected, click on the <strong>Download</strong> button. The file will begin downloading to your local machine.</li>
-</ol>
+<h1 id="reference-genome">Reference genome<a class="headerlink" href="#reference-genome" title="Permanent link">&para;</a></h1>
+<p>GenomeSuite Analyzer includes the T2T human reference genome, the most complete human genome at this time: <a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_009914755.1/">T2T-CHM13v2.0</a></p>
+<p>T2T human genome.<br />
+Sergey Nurk <em>et al.</em> , The complete sequence of a human genome. Science 376, 44-53(2022).<br />
+DOI:<a href="https://www.science.org/doi/10.1126/science.abj6987">10.1126/science.abj6987</a></p>
+<p>T2T human Y chromosome.<br />
+Rhie A, Nurk S, Cechova M, Hoyt SJ, Taylor DJ, Altemose N, Hook PW, Koren S, Rautiainen M, Alexandrov IA, Allen J, Asri M, Bzikadze AV, Chen NC, Chin CS, Diekhans M, Flicek P, Formenti G, Fungtammasan A, Garcia Giron C, Garrison E, Gershman A, Gerton JL, Grady PGS, Guarracino A, Haggerty L, Halabian R, Hansen NF, Harris R, Hartley GA, Harvey WT, Haukness M, Heinz J, Hourlier T, Hubley RM, Hunt SE, Hwang S, Jain M, Kesharwani RK, Lewis AP, Li H, Logsdon GA, Lucas JK, Makalowski W, Markovic C, Martin FJ, Mc Cartney AM, McCoy RC, McDaniel J, McNulty BM, Medvedev P, Mikheenko A, Munson KM, Murphy TD, Olsen HE, Olson ND, Paulin LF, Porubsky D, Potapova T, Ryabov F, Salzberg SL, Sauria MEG, Sedlazeck FJ, Shafin K, Shepelev VA, Shumate A, Storer JM, Surapaneni L, Taravella Oill AM, Thibaud-Nissen F, Timp W, Tomaszkiewicz M, Vollger MR, Walenz BP, Watwood AC, Weissensteiner MH, Wenger AM, Wilson MA, Zarate S, Zhu Y, Zook JM, Eichler EE, O'Neill RJ, Schatz MC, Miga KH, Makova KD, Phillippy AM. The complete sequence of a human Y chromosome. Nature. 2023 Sep;621(7978):344-354. doi: 10.1038/s41586-023-06457-y. Epub 2023 Aug 23. PMID: 37612512; PMCID: PMC10752217.</p>
 
 
 
@@ -648,7 +627,7 @@
     <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.tooltips", "content.tabs.link", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "toc.follow"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      <script src="assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>

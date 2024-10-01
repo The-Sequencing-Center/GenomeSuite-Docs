@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://the-sequencing-center.github.io/genomesuite-docs/index.html">
+        <link rel="canonical" href="https://the-sequencing-center.github.io/genomesuite-docs/analyzer-connect.html">
       
       
+        <link rel="prev" href="analyzer-configure-ec2.html">
       
-        <link rel="next" href="analyzer-getting-started.html">
+      
+        <link rel="next" href="analyzer-configure-aws.html">
       
       
       <link rel="icon" href="assets/tsc-logo.jpg">
@@ -20,7 +22,7 @@
     
     
       
-        <title>GenomeSuite Documentation</title>
+        <title>Connect to the EC2 instance - GenomeSuite Documentation</title>
       
     
     
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#contact" class="md-skip">
+        <a href="#connect-to-genomesuite-analyzer-on-ec2" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Connect to the EC2 instance
             
           </span>
         </div>
@@ -222,28 +224,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -252,75 +236,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#contact" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contact
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build-the-documentation-locally" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build the documentation locally
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Build the documentation locally">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-the-required-software" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing the required software
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-local-site" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running the local site
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stopping-the-local-site" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stopping the local site
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -329,8 +244,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -357,13 +274,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -377,7 +292,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             GenomeSuite Analyzer
@@ -451,10 +366,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="analyzer-connect.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Connect to the EC2 instance
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="analyzer-connect.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -463,6 +398,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-your-ec2-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect to your EC2 instance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connect to your EC2 instance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -618,6 +597,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -626,46 +607,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contact" class="md-nav__link">
+  <a href="#connect-to-your-ec2-instance" class="md-nav__link">
     <span class="md-ellipsis">
-      Contact
+      Connect to your EC2 instance
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build-the-documentation-locally" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build the documentation locally
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Build the documentation locally">
+    <nav class="md-nav" aria-label="Connect to your EC2 instance">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installing-the-required-software" class="md-nav__link">
+  <a href="#additional-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing the required software
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-local-site" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running the local site
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stopping-the-local-site" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stopping the local site
+      Additional tips
     </span>
   </a>
   
@@ -691,29 +645,33 @@
                   
 
 
-  <h1>Home</h1>
-
-<p>Welcome to the official documentation for GenomeSuite by The Sequencing Center.</p>
-<h2 id="contact">Contact<a class="headerlink" href="#contact" title="Permanent link">&para;</a></h2>
-<p><strong>Company website:</strong> <a href="http://www.thesequencingcenter.com">www.thesequencingcenter.com</a></p>
-<p><strong>Support email:</strong> <a href="mailto:support@thesequencingcenter.com">support@thesequencingcenter.com</a></p>
-<h2 id="build-the-documentation-locally">Build the documentation locally<a class="headerlink" href="#build-the-documentation-locally" title="Permanent link">&para;</a></h2>
-<p>The GenomeSuite documentation site uses <a href="https://www.mkdocs.org">MkDocs</a> and the <a href="https://squidfunk.github.io/mkdocs-material">Material</a> theme to create a local static website. The latest version of the documentation site can be viewed at <a href="https://the-sequencing-center.github.io/GenomeSuite-Docs/">https://the-sequencing-center.github.io/GenomeSuite-Docs/</a>.</p>
-<p>If you wish to build and edit the documentation locally, follow the instructions below.</p>
-<h3 id="installing-the-required-software">Installing the required software<a class="headerlink" href="#installing-the-required-software" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://git-scm.com">Git</a></li>
-<li><a href="https://www.python.org/downloads/">Python 3.5 or newer</a></li>
-<li><a href="https://pip.pypa.io/en/stable/installation/#installation">pip</a> (package manager)</li>
-<li><a href="https://www.mkdocs.org/#installation">MkDocs</a></li>
-<li><a href="https://squidfunk.github.io/mkdocs-material/getting-started/">Material</a> theme for MkDocs</li>
-</ul>
-<p>Both MkDocs and Material have well-written documentation sites. We recommend reading through these sites before editing and building documentation.</p>
-<h3 id="running-the-local-site">Running the local site<a class="headerlink" href="#running-the-local-site" title="Permanent link">&para;</a></h3>
-<p>When editing a documentation page, you can create a live preview by building it locally using <code>mkdocs serve</code> in the command terminal. Open http://127.0.0.1:8000 in your browser to view and navigate through the site.</p>
-<p>Saving file changes in your editor will automatically update the live server. </p>
-<h3 id="stopping-the-local-site">Stopping the local site<a class="headerlink" href="#stopping-the-local-site" title="Permanent link">&para;</a></h3>
-<p>To stop the live server, press <code>Control</code> + <code>c</code>.</p>
+<h1 id="connect-to-genomesuite-analyzer-on-ec2">Connect to GenomeSuite Analyzer on EC2<a class="headerlink" href="#connect-to-genomesuite-analyzer-on-ec2" title="Permanent link">&para;</a></h1>
+<p>You can now access the GenomeSuite Analyzer instance that is running on AWS EC2. </p>
+<h2 id="connect-to-your-ec2-instance">Connect to your EC2 instance<a class="headerlink" href="#connect-to-your-ec2-instance" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Ensure you have the <code>.pem</code> key pair file that was created when you launched your EC2 instance.</p>
+</li>
+<li>
+<p>Set the correct permissions for the key pair file by running the following command:</p>
+<p><div class="highlight"><pre><span></span><code>chmod 400 /path/to/your-keypair.pem
+</code></pre></div>
+Replace <code>/path/to/your-keypair.pem</code> with the actual path to your <code>.pem</code> file.</p>
+</li>
+<li>
+<p>Connect to your EC2 instance by running the following command in Terminal:</p>
+<p><div class="highlight"><pre><span></span><code>ssh -i /path/to/your-keypair.pem ubuntu@your-instance-public-dns
+</code></pre></div>
+Replace <code>/path/to/your-keypair.pem</code> with the path to your .pem file and <code>your-instance-public-dns</code> with the Public DNS address of your EC2 instance. You can find the Public DNS in the AWS Management Console under the <strong>Instances</strong> section.</p>
+</li>
+<li>
+<p><strong>Access your EC2 instance:</strong></p>
+</li>
+<li>Once connected, you will have shell access to your EC2 instance, allowing you to manage it as needed.</li>
+</ol>
+<h3 id="additional-tips">Additional tips<a class="headerlink" href="#additional-tips" title="Permanent link">&para;</a></h3>
+<p><strong>Using SSH config file:</strong> If you frequently connect to the same instance, consider setting up an SSH config file to simplify the connection command.</p>
+<p><strong>Security considerations:</strong> Ensure your <code>.pem</code> file is kept secure, as it provides access to your EC2 instance.</p>
 
 
 

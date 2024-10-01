@@ -14,15 +14,15 @@
         <link rel="prev" href="analyzer-getting-started.html">
       
       
-        <link rel="next" href="analyzer-config-connect.html">
+        <link rel="next" href="analyzer-configure-ec2.html">
       
       
       <link rel="icon" href="assets/tsc-logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>Launching GenomeSuite Analyzer on EC2 - GenomeSuite Documentation</title>
+        <title>Launch GenomeSuite Analyzer on EC2 - GenomeSuite Documentation</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#launching-genomesuite-analyzer-on-ec2" class="md-skip">
+        <a href="#launch-genomesuite-analyzer-on-ec2" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Launching GenomeSuite Analyzer on EC2
+              Launch GenomeSuite Analyzer on EC2
             
           </span>
         </div>
@@ -261,6 +261,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -330,7 +340,7 @@
           
   
   <span class="md-ellipsis">
-    Launching GenomeSuite Analyzer on EC2
+    Launch GenomeSuite Analyzer on EC2
   </span>
   
 
@@ -341,7 +351,7 @@
         
   
   <span class="md-ellipsis">
-    Launching GenomeSuite Analyzer on EC2
+    Launch GenomeSuite Analyzer on EC2
   </span>
   
 
@@ -363,45 +373,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1-start-at-the-ec2-dashboard" class="md-nav__link">
+  <a href="#select-an-ec2-region" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Start at the EC2 Dashboard
+      Select an EC2 region
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-select-a-region" class="md-nav__link">
+  <a href="#launch-the-genomesuite-analyzer-ami" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Select a Region
+      Launch the GenomeSuite Analyzer AMI
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-find-the-genomesuite-analyzer-ami" class="md-nav__link">
+  <a href="#configure-the-instance" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Find the GenomeSuite Analyzer AMI
+      Configure the instance
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-configure-the-instance" class="md-nav__link">
+  <a href="#launch-the-instance" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Configure the Instance
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-launch-the-instance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 5: Launch the Instance
+      Launch the instance
     </span>
   </a>
   
@@ -423,11 +424,11 @@
   
   
     <li class="md-nav__item">
-      <a href="analyzer-config-connect.html" class="md-nav__link">
+      <a href="analyzer-configure-ec2.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Configuring and connecting to the EC2 Instance
+    Configure the EC2 instance
   </span>
   
 
@@ -444,11 +445,11 @@
   
   
     <li class="md-nav__item">
-      <a href="analyzer-run-terminate.html" class="md-nav__link">
+      <a href="analyzer-connect.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Running GenomeSuite Analyzer
+    Connect to the EC2 instance
   </span>
   
 
@@ -465,11 +466,116 @@
   
   
     <li class="md-nav__item">
-      <a href="analyzer-retrieve-vcf.html" class="md-nav__link">
+      <a href="analyzer-configure-aws.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Retrieving the VCF files
+    Configure AWS credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-how-to-get-aws-keys.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to get AWS keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-run.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run GenomeSuite Analyzer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-download-vcf.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download the VCF files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-reference-genome.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference genome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-license-notice.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License notice
   </span>
   
 
@@ -513,45 +619,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1-start-at-the-ec2-dashboard" class="md-nav__link">
+  <a href="#select-an-ec2-region" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Start at the EC2 Dashboard
+      Select an EC2 region
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-select-a-region" class="md-nav__link">
+  <a href="#launch-the-genomesuite-analyzer-ami" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Select a Region
+      Launch the GenomeSuite Analyzer AMI
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-find-the-genomesuite-analyzer-ami" class="md-nav__link">
+  <a href="#configure-the-instance" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Find the GenomeSuite Analyzer AMI
+      Configure the instance
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-configure-the-instance" class="md-nav__link">
+  <a href="#launch-the-instance" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Configure the Instance
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-launch-the-instance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 5: Launch the Instance
+      Launch the instance
     </span>
   </a>
   
@@ -572,119 +669,98 @@
                   
 
 
-<h1 id="launching-genomesuite-analyzer-on-ec2">Launching GenomeSuite Analyzer on EC2<a class="headerlink" href="#launching-genomesuite-analyzer-on-ec2" title="Permanent link">&para;</a></h1>
-<p>To launch the GenomeSuite Analyzer AMI (Amazon Machine Image) using EC2, follow these steps:</p>
-<h2 id="step-1-start-at-the-ec2-dashboard">Step 1: Start at the EC2 Dashboard<a class="headerlink" href="#step-1-start-at-the-ec2-dashboard" title="Permanent link">&para;</a></h2>
+<h1 id="launch-genomesuite-analyzer-on-ec2">Launch GenomeSuite Analyzer on EC2<a class="headerlink" href="#launch-genomesuite-analyzer-on-ec2" title="Permanent link">&para;</a></h1>
+<p>To launch the GenomeSuite Analyzer AMI (Amazon Machine Image) using EC2:</p>
+<h2 id="select-an-ec2-region">Select an EC2 region<a class="headerlink" href="#select-an-ec2-region" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Navigate to the EC2 Dashboard:</strong></li>
-<li>Once on the EC2 Dashboard, confirm you are in the correct region.</li>
+<li>
+<p>Navigate to the EC2 Dashboard and confirm you are in the correct region. </p>
+</li>
+<li>
+<p>In the top-right corner of the EC2 Dashboard, click on the <strong>Region</strong> selector drop-down.</p>
+</li>
+<li>
+<p>Select one of the four regions from the list of regions GenomeSuite Analyzer is available in four AWS regions.</p>
+<ul>
+<li>US East (N. Virginia) us-east-1   </li>
+<li>US East (Ohio) us-east-2  </li>
+<li>US West (Oregon) us-west-2   </li>
+<li>Canada (Central) ca-central-1  </li>
+</ul>
+</li>
 </ol>
-<h2 id="step-2-select-a-region">Step 2: Select a Region<a class="headerlink" href="#step-2-select-a-region" title="Permanent link">&para;</a></h2>
-<pre><code>1. GenomeSuite Analyzer is available in four AWS regions:  
-    * US East (N. Virginia) us-east-1   
-    * US East (Ohio) us-east-2  
-    * US West (Oregon) us-west-2   
-    * Canada (Central) ca-central-1   
-2. Choose a Region:
-    * In the top-right corner of the EC2 Dashboard, click on the region selector drop-down.  
-    * Select one of the four regions from the list of regions.
-</code></pre>
-<h2 id="step-3-find-the-genomesuite-analyzer-ami">Step 3: Find the GenomeSuite Analyzer AMI<a class="headerlink" href="#step-3-find-the-genomesuite-analyzer-ami" title="Permanent link">&para;</a></h2>
+<h2 id="launch-the-genomesuite-analyzer-ami">Launch the GenomeSuite Analyzer AMI<a class="headerlink" href="#launch-the-genomesuite-analyzer-ami" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Navigate to AMIs:</strong></li>
 <li>
 <p>In the left-hand menu under <strong>Images</strong>, click on <strong>AMIs</strong>.</p>
 </li>
 <li>
-<p><strong>Filter for Public Images:</strong></p>
+<p>At the top of the AMIs page, click <strong>Owned by me</strong> and choose <strong>Public images</strong> from the drop-down list.</p>
 </li>
 <li>
-<p>At the top of the AMIs page, find the drop-down list labeled <strong>Owned by me</strong>. Click on it and choose <strong>Public images</strong>.</p>
+<p>In the search bar, type <strong>GenomeSuite_Analyzer_v.1.3.0</strong> and press Enter.</p>
 </li>
 <li>
-<p><strong>Search for the GenomeSuite Analyzer AMI:</strong></p>
+<p>From the results, select the checkbox next to the <strong>GenomeSuite_Analyzer_v.1.3.0</strong> AMI to highlight the row.</p>
 </li>
 <li>
-<p>In the search bar, type <strong>Sniffles_v.1.1.0</strong> and press Enter.</p>
+<p>With the AMI row selected, click on the <strong>Launch instance from image</strong> button at the top right of the page to launch the instance.</p>
 </li>
-<li>
-<p><strong>Select the AMI:</strong></p>
-</li>
-<li>Find the AMI named <strong>Sniffles_v.1.1.0</strong> in the results.</li>
-<li>
-<p>Click the checkbox next to this AMI to highlight the row.</p>
-</li>
-<li>
-<p><strong>Launch the Instance:</strong></p>
-</li>
-<li>With the AMI row selected, click on the <strong>Launch instance from image</strong> button at the top right of the page.</li>
 </ol>
-<h2 id="step-4-configure-the-instance">Step 4: Configure the Instance<a class="headerlink" href="#step-4-configure-the-instance" title="Permanent link">&para;</a></h2>
+<h2 id="configure-the-instance">Configure the instance<a class="headerlink" href="#configure-the-instance" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Name the Instance:</strong></li>
 <li>
-<p>On the <strong>Launch an Instance</strong> page, provide a name for your instance in the <strong>Name</strong> field.</p>
+<p>On the <strong>Launch an Instance</strong> page, enter a name for your instance in the <strong>Name</strong> field.</p>
 </li>
 <li>
-<p><strong>Select the Instance Type:</strong></p>
-</li>
-<li>Under <strong>Instance Type</strong>, select one of the following options:</li>
-</ol>
-<p><code>For human exome, use these instance types:</code>
-   1. <code>p3.2xlarge</code>
-   2. <code>p3.8xlarge</code>
-   3. <code>p3.16xlarge</code></p>
-<p><code>For human whole genome, use this instance type:</code>
-   1. <code>p4d.24xlarge</code></p>
+<p>Under <strong>Instance Type</strong>, select one of the following options:</p>
+<p>For human exome, use these instance types:</p>
+<ul>
+<li><code>p3.2xlarge</code></li>
+<li><code>p3.8xlarge</code></li>
+<li><code>p3.16xlarge</code></li>
+</ul>
+<p>For human whole genome, use this instance type:</p>
+<ul>
+<li><code>p4d.24xlarge</code></li>
+</ul>
 <p>These instance types are optimized for high-performance computing tasks using Nvidia GPU's.</p>
-<ol>
-<li><strong>Configure Key Pair:</strong></li>
-<li>
-<p>Under <strong>Key Pair (login)</strong>, select the key pair you created earlier (e.g., <code>**sniffles-keypair**</code>).</p>
 </li>
 <li>
-<p><strong>Set Network Settings:</strong></p>
-</li>
-<li>Under <strong>Network Settings</strong>, select <strong>Edit</strong>.</li>
-<li>
-<p>Choose <strong>Select existing security group</strong> and select the security group you created earlier (e.g., <code>**sniffles-sg**</code>).</p>
+<p>Under <strong>Key Pair (login)</strong>, select the key pair you created earlier (e.g., <code>GenomeSuite-Analyzer-keypair</code>).</p>
 </li>
 <li>
-<p><strong>Configure Storage:</strong></p>
+<p>Under <strong>Network Settings</strong> &gt; <strong>Edit</strong>, choose <strong>Select existing security group</strong> and select the security group you created earlier (e.g., <code>GenomeSuite-Analyzer-sg</code>).</p>
 </li>
-<li>Under <strong>Configure Storage</strong>, set the storage size to <strong>2048 GiB</strong>.</li>
-<li>Ensure the storage type is set to <strong>gp3</strong> (General Purpose SSD).</li>
+<li>
+<p>Under <strong>Configure Storage</strong>, set the storage size to <strong>2048 GiB</strong>. Ensure the storage type is set to <strong>gp3</strong> (General Purpose SSD).</p>
+</li>
 </ol>
-<h2 id="step-5-launch-the-instance">Step 5: Launch the Instance<a class="headerlink" href="#step-5-launch-the-instance" title="Permanent link">&para;</a></h2>
+<h2 id="launch-the-instance">Launch the instance<a class="headerlink" href="#launch-the-instance" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Review the Settings:</strong></li>
 <li>
-<p>Double-check all configurations to ensure everything is set correctly.</p>
+<p>Review the configurations to ensure everything is set correctly.</p>
 </li>
 <li>
-<p><strong>Launch the Instance:</strong></p>
-</li>
-<li>Click on the <strong>Launch Instance</strong> button at the bottom of the page.  </li>
-<li>
-<p>If you get an error message “Insufficient Capacity”, this means all of the available computing resources are in use.    </p>
-<pre><code>At this point, you have two options:
-
-   1) Wait a few minutes and try to launch the instance again.  
-   2) Choose a different Region and try to launch the instance again.
-
-Typically, there are computing resources available in one of the regions.
-</code></pre>
+<p>Click the <strong>Launch Instance</strong> button at the bottom of the page.</p>
+<ul>
+<li>If you get an error message <code>Insufficient Capacity</code>, this means all of the available computing resources are in use.</li>
+</ul>
 </li>
 <li>
-<p><strong>Instance Initialization:</strong></p>
+<p>At this point, you have two options:</p>
+<ol>
+<li>Wait a few minutes and try to launch the instance again.  </li>
+<li>Choose a different region and try to launch the instance again.</li>
+</ol>
+<p>Typically, there are computing resources available in one of the regions. </p>
 </li>
 <li>
 <p>Once launched, you will be taken to a page showing the status of your instance. The instance will take a few minutes to initialize.</p>
 </li>
 <li>
-<p><strong>Verify the Instance:</strong></p>
+<p>After the instance is running, you can find it under <strong>Instances</strong> in the EC2 Dashboard. Make sure the instance status is <strong>Running</strong> before attempting to connect.</p>
 </li>
-<li>After the instance is running, you can find it under <strong>Instances</strong> in the EC2 Dashboard. Make sure the instance status is <strong>running</strong> before attempting to connect.</li>
 </ol>
 
 
@@ -747,7 +823,7 @@ Typically, there are computing resources available in one of the regions.
     <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.tooltips", "content.tabs.link", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "toc.follow"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      <script src="assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>
