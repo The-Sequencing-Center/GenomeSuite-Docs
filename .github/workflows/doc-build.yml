@@ -64,9 +64,14 @@ jobs:
         run: |
           pandoc docs/analyzer-getting-started.md \
                  docs/analyzer-launch.md \
-                 docs/analyzer-config-connect.md \
-                 docs/analyzer-run-terminate.md \
-                 docs/analyzer-retrieve-vcf.md \
+                 docs/analyzer-configure-ec2.md \
+                 docs/analyzer-connect.md \
+                 docs/analyzer-configure-aws.md\
+                 docs/analyzer-how-to-get-aws-keys.md \
+                 docs/analyzer-run.md \
+                 docs/analyzer-download-vcf.md \
+                 docs/analyzer-reference-genome.md\
+                 docs/analyzer-license-notice.md\
                  --toc \
                  -o output/docs.pdf
 
