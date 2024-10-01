@@ -1,0 +1,1047 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://the-sequencing-center.github.io/genomesuite-docs/analyzer-getting-started.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="analyzer-launch.html">
+      
+      
+      <link rel="icon" href="assets/tsc-logo.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Getting started - GenomeSuite Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="GenomeSuite Documentation" class="md-header__button md-logo" aria-label="GenomeSuite Documentation" data-md-component="logo">
+      
+  <img src="assets/tsc-logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GenomeSuite Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="GenomeSuite Documentation" class="md-nav__button md-logo" aria-label="GenomeSuite Documentation" data-md-component="logo">
+      
+  <img src="assets/tsc-logo.jpg" alt="logo">
+
+    </a>
+    GenomeSuite Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GenomeSuite Analyzer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            GenomeSuite Analyzer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="analyzer-getting-started.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-aws-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an AWS account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-into-your-aws-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log into your AWS account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-s3-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an S3 bucket
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-pod5-files-to-an-s3-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload POD5 files to an S3 bucket
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-pod5-files-in-s3-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Store POD5 files in S3 bucket
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-key-pair" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a key pair
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-the-private-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure the private key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-security-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a security group
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-launch.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Launch GenomeSuite Analyzer on EC2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-configure-ec2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure the EC2 instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-connect.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connect to the EC2 instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-configure-aws.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure AWS credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-how-to-get-aws-keys.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to get AWS keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-run.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run GenomeSuite Analyzer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-download-vcf.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download the VCF files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-reference-genome.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference genome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyzer-license-notice.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License notice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-aws-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an AWS account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-into-your-aws-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log into your AWS account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-s3-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an S3 bucket
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-pod5-files-to-an-s3-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload POD5 files to an S3 bucket
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-pod5-files-in-s3-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Store POD5 files in S3 bucket
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-key-pair" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a key pair
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-the-private-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure the private key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-security-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a security group
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
+<p>GenomeSuite Analyzer runs on the <a href="https://aws.amazon.com/">Amazon Web Services (AWS)</a> platform. If you do not have an AWS account, start with <a href="#create-an-aws-account">Create an AWS account</a>. If you do have an AWS account, you can skip to the step <a href="#log-into-your-aws-account">Log into your AWS account</a>.</p>
+<p>Some steps are identified as a “<em>one-time step</em>”.  This means you should only have to perform this step once during initial setup.</p>
+<p>GenomeSuite Analyzer can process POD5, FAST5 or BAM files. You will have to choose one filetype for each run.</p>
+<h2 id="create-an-aws-account">Create an AWS account<a class="headerlink" href="#create-an-aws-account" title="Permanent link">&para;</a></h2>
+<p>This is a <em>one-time step</em>.</p>
+<ol>
+<li>
+<p>Open the <a href="https://aws.amazon.com/resources/create-account/">AWS account creation</a> page and <strong>Create an AWS Account</strong>.</p>
+</li>
+<li>
+<p>Fill in the details and click <strong>Verify email address</strong>. You will receive an email with a verification code that you need to enter on the sign up page.</p>
+</li>
+<li>
+<p>Set up your root user password and confirm it.</p>
+</li>
+<li>
+<p>Choose between a Personal or Professional account. The features and functions are the same, but the information required might differ slightly.</p>
+</li>
+<li>
+<p>Fill in your contact information and read the AWS Customer Agreement. Once done, click <strong>Continue</strong>.</p>
+</li>
+<li>
+<p>Provide a valid payment method (credit/debit card). This step is mandatory even if you plan to use the free tier services. You may also need to verify your payment method by entering a code sent by AWS.</p>
+</li>
+<li>
+<p>AWS will ask you to provide a phone number to verify your identity. You will receive a call or SMS with a verification code that you need to enter to proceed.</p>
+</li>
+<li>
+<p>Select one of the available support plans (Basic, Developer, Business, or Enterprise). The Basic support plan is free.</p>
+</li>
+<li>
+<p>After selecting your support plan, AWS will begin activating your account. This process usually takes a few minutes but can take up to 24 hours. Once activation is complete, you will receive a confirmation email.</p>
+</li>
+</ol>
+<p>After your account is activated, you can sign in to the <a href="https://aws.amazon.com/console/">AWS Management Console</a> and start using AWS services.</p>
+<h2 id="log-into-your-aws-account">Log into your AWS account<a class="headerlink" href="#log-into-your-aws-account" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Open your web browser and go to the <a href="https://aws.amazon.com/console/">AWS Management Console</a> login page.</p>
+</li>
+<li>
+<p>On the login page, you will see two options:</p>
+</li>
+<li><strong>Root user:</strong> Use this if you are logging in as the account owner or the main administrator.<ul>
+<li>If you are the root user, click <strong>Root user</strong> and enter your email address associated with the AWS account. Click <strong>Next</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>IAM user:</strong> Use this if you have been assigned a user account within an AWS organization.</p>
+<ul>
+<li>If you are an IAM user, click <strong>IAM user</strong> and enter your IAM username along with the account ID or alias. Click <strong>Next</strong>.</li>
+</ul>
+</li>
+<li>
+<p>Enter the password for your account, and click <strong>Sign In</strong>.</p>
+</li>
+<li>
+<p>If Multi-Factor Authentication (MFA) is enabled for your account, you will be prompted to enter the code from your authentication device, such as a mobile app. Enter the code and proceed.</p>
+</li>
+<li>
+<p>After successful authentication, you will be directed to the AWS Management Console, where you can start managing your AWS services.</p>
+</li>
+</ol>
+<h2 id="create-an-s3-bucket">Create an S3 bucket<a class="headerlink" href="#create-an-s3-bucket" title="Permanent link">&para;</a></h2>
+<p>This is a <em>one-time step</em>.</p>
+<p>You will now create an AWS S3 bucket that will contain all of your Nanopore POD5 sample files. </p>
+<ol>
+<li>
+<p>From the <a href="https://aws.amazon.com/console/">AWS Management Console</a>, type <strong>S3</strong> into the search bar at the top and select <strong>S3</strong> from the drop-down list. This takes you to the Amazon S3 dashboard.</p>
+</li>
+<li>
+<p>On the S3 dashboard, click the <strong>Create bucket</strong> button.</p>
+</li>
+<li>
+<p>To configure the bucket settings, enter a name for the bucket in the <strong>Bucket</strong> name field.</p>
+</li>
+<li><strong>Bucket name:</strong> Bucket names must be globally unique across all existing bucket names in Amazon S3. <ul>
+<li>If you choose a name that is already taken, you'll have to try other names until you find a unique name.</li>
+<li>The name must not contain spaces and must adhere to the bucket naming rules (e.g., lowercase letters, numbers, and hyphens).</li>
+</ul>
+</li>
+<li>
+<p><strong>Region:</strong> Select the region <strong>US East (N. Virginia) us-east-1</strong>. This is the region where the S3 bucket will be created.</p>
+</li>
+<li>
+<p>Set the bucket options.</p>
+</li>
+<li>
+<p><strong>Block public access settings:</strong> By default, S3 buckets are set to block all public access. You can leave this option enabled unless you specifically need the bucket to be public.</p>
+</li>
+<li>
+<p><strong>Bucket versioning:</strong> To enable versioning, which keeps multiple versions of an object in the same bucket, you may optionally choose to enable this in <strong>Bucket Versioning</strong>.</p>
+</li>
+<li>
+<p><strong>Tags, object lock, and encryption:</strong> You may also enable additional optional settings such as adding tags, enabling object lock, and set default encryption, but these are not necessary can be configured later.</p>
+</li>
+<li>
+<p>Review your bucket settings configuration and click <strong>Create bucket</strong>.</p>
+</li>
+<li>
+<p>After the bucket is created, you are taken back to the S3 dashboard, where you will see the bucket name listed among your S3 buckets. Verify that the bucket was created successfully.</p>
+</li>
+</ol>
+<h2 id="upload-pod5-files-to-an-s3-bucket">Upload POD5 files to an S3 bucket<a class="headerlink" href="#upload-pod5-files-to-an-s3-bucket" title="Permanent link">&para;</a></h2>
+<p>There are several methods available for uploading POD5 files to S3 buckets. These methods are beyond the scope of this document. For human whole genome sequencing, the aggregate size of these files is quite large, ca. 1TB or more, and may need special methods to upload in reasonable time. </p>
+<p>Please contact us at <a href="mailto:support@thesequencingcenter.com">support@thesequencingcenter.com</a> to review and discuss options for uploading large datasets.</p>
+<h2 id="store-pod5-files-in-s3-bucket">Store POD5 files in S3 bucket<a class="headerlink" href="#store-pod5-files-in-s3-bucket" title="Permanent link">&para;</a></h2>
+<p>If you already have an AWS account and an S3 bucket with POD5 files in it, you have two choices. You can use the existing bucket name with GenomeSuite Analyzer or you can copy or move the files from the existing bucket to another bucket within the same AWS account. </p>
+<ol>
+<li>
+<p>In the S3 dashboard, click on the bucket that contains the POD5, FAST5 or BAM files you want to copy or move.</p>
+</li>
+<li>
+<p>Browse the folders in your source bucket and select the files you want to copy or move.</p>
+</li>
+<li>
+<p>You can select multiple files by holding the <strong>Ctrl</strong> key (or <strong>Cmd</strong> on Mac) while clicking.</p>
+</li>
+<li>
+<p>After selecting the files, click the <strong>Actions</strong> button at the top of the screen, and choose either <strong>Copy</strong> or <strong>Move</strong>.</p>
+</li>
+<li>
+<p>A dialog box appears asking where you want to copy or move the files.</p>
+</li>
+<li>
+<p>In the <strong>Destination</strong> field, click <strong>Browse S3</strong> and navigate to the destination bucket. Specify the exact location within the bucket by selecting a folder or leave it blank to place the files directly in the bucket's root.</p>
+</li>
+<li>
+<p>Once the destination is set, click <strong>Copy</strong> or <strong>Move</strong>. Depending on the size and number of files, this may take a few moments.</p>
+</li>
+<li>
+<p>Navigate to the destination bucket and verify that the files have been successfully copied or moved.</p>
+</li>
+</ol>
+<h2 id="create-a-key-pair">Create a key pair<a class="headerlink" href="#create-a-key-pair" title="Permanent link">&para;</a></h2>
+<p>This is a <em>one-time step</em>.</p>
+<ol>
+<li>
+<p>In the AWS Management Console, type <strong>EC2</strong> in the search bar and select <strong>EC2</strong> from the drop-down menu.</p>
+</li>
+<li>
+<p>In the EC2 Dashboard in the left-hand side menu, click on the <strong>Key Pairs</strong> option under the <strong>Network &amp; Security</strong> section.</p>
+</li>
+<li>
+<p>Click the <strong>Create Key Pair</strong> button.</p>
+</li>
+<li>
+<p>Configure the key pair settings:</p>
+<ul>
+<li><strong>Name:</strong> Enter a name for your key pair, such as <code>GenomeSuite-Analyzer-keypair</code>. The name must be unique within your AWS region.</li>
+<li><strong>Key pair type:</strong> Choose the key pair type, typically <strong>ED25519</strong>.</li>
+<li><strong>Private key file format:</strong> Choose the format for the private key file. Options include:<ul>
+<li><strong>.pem:</strong> For SSH clients (like OpenSSH) on Linux or macOS.</li>
+<li><strong>.ppk:</strong> For PuTTY, a popular SSH client on Windows.</li>
+</ul>
+</li>
+<li><strong>Tags:</strong> (Optional) You can add tags to your key pair for easier management.</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Create key pair</strong>. AWS will generate the key pair and automatically download the private key file to your computer.</p>
+</li>
+</ol>
+<h2 id="secure-the-private-key">Secure the private key<a class="headerlink" href="#secure-the-private-key" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Save the private key.</li>
+<li>
+<p>The private key file will automatically download to your computer. This file is crucial for connecting to your EC2 instances securely, so store it in a safe location. If you lose this file, you will not be able to connect to your instances using this key pair.</p>
+</li>
+<li>
+<p>To set the correct key pair permissions on a Linux or macOS system, run the following command:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>chmod 400 /path/to/your-keypair.pem
+</code></pre></div>
+<ol>
+<li>Store the private key in a secure location. Do not share it with anyone or commit it to version control systems like Git.</li>
+</ol>
+<p><strong>Important notice:</strong></p>
+<ul>
+<li>
+<p><strong>One-time download:</strong> The private key file can only be downloaded once at the time of creation. If you lose the private key, you will need to create a new key pair and update your instances to use the new key.</p>
+</li>
+<li>
+<p><strong>Accessing EC2 instances:</strong> When launching a new EC2 instance, you will be able to select this key pair for SSH access. Ensure the correct permissions are set on your private key file before attempting to connect.</p>
+</li>
+</ul>
+<h2 id="create-a-security-group">Create a security group<a class="headerlink" href="#create-a-security-group" title="Permanent link">&para;</a></h2>
+<p>This is a <em>one-time step</em>.</p>
+<ol>
+<li>
+<p>In the AWS Management Console, type <strong>EC2</strong> in the search bar and select <strong>EC2</strong> from the drop-down menu.</p>
+</li>
+<li>
+<p>From the left-hand menu in the EC2 Dashboard, click the <strong>Security Groups</strong> option under the <strong>Network &amp; Security</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Create security group</strong> button to create and configure a new security group.</p>
+</li>
+<li><strong>Name:</strong> Enter a name for your security group, such as <strong>GenomeSuite-Analyzer-sg</strong>.</li>
+<li><strong>Description:</strong> Provide a brief description of the security group, like "Security group for SSH access to EC2 instances".</li>
+<li>
+<p><strong>VPC:</strong> Choose the appropriate VPC (Virtual Private Cloud) where you want this security group to be used. If you only have one VPC, it will be selected by default.</p>
+</li>
+<li>
+<p>To configure the inbound rules for SSH access, click <strong>Add Rule</strong> from the <strong>Inbound rules</strong> section.</p>
+</li>
+<li><strong>Type:</strong> From the drop-down list, select <strong>SSH</strong>. This will automatically set the <strong>Port Range</strong> to 22.</li>
+<li>
+<p><strong>Source:</strong> You can choose <strong>My IP</strong> to allow SSH access only from your current IP address.</p>
+<ul>
+<li>Alternatively, select <strong>Anywhere</strong> (0.0.0.0/0) to allow SSH access from any IP address, but note that this is less secure and should be used with caution.</li>
+<li>You can also specify a custom IP range if you only want to allow SSH access from specific IP addresses or ranges.</li>
+</ul>
+</li>
+<li>
+<p>Review the rules you added to ensure they match your requirements. Once satisfied with the configuration, click <strong>Create security group</strong>.</p>
+</li>
+<li>
+<p>Attach the security group to an EC2 instance.</p>
+</li>
+<li>
+<p><strong>During EC2 instance launch:</strong> When launching a new EC2 instance, you can select this security group under the <strong>Configure Security Group</strong> section.</p>
+</li>
+<li>
+<p><strong>For existing instances:</strong> If you want to assign this security group to an existing instance, go to the <strong>Instances</strong> section, select your instance, click <strong>Actions</strong> &gt; <strong>Networking</strong> &gt; <strong>Change Security Groups</strong>, and then select the <strong>analyzer-sg</strong> security group.</p>
+</li>
+</ol>
+<p><strong>Important notice:</strong></p>
+<ul>
+<li>
+<p><strong>Security considerations:</strong> Allowing SSH access from any IP address (0.0.0.0/0) is convenient, but can expose your instance to potential attacks. It is recommended to restrict access to specific IP addresses whenever possible.</p>
+</li>
+<li>
+<p><strong>Firewall settings:</strong> Ensure that any local firewalls on your machine or network allow outbound connections on port 22.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; The Sequencing Center 2024
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.tooltips", "content.tabs.link", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "toc.follow"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>
